@@ -6,6 +6,6 @@ define('DB_USER', 'root');
 
 define('DB_PASS', '');
 
-define('DB_NAME', 'db-planty')
+define('DB_NAME', 'planty-db')
 
 ?>

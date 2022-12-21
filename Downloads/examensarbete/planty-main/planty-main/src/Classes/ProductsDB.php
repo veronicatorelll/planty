@@ -3,8 +3,7 @@
 require_once __DIR__ . '/Database.php';
 require_once __DIR__ . '/ProductClass.php';
 
-class ProductsDB extends Database
-{
+class ProductsDB extends Database{
 
 
   public function get_all_products()
@@ -48,10 +47,10 @@ class ProductsDB extends Database
     $title = $db_product["title"];
     $description = $db_product["description"];
     $price = $db_product["price"];
-    $db_img_url = $db_product["img-url"];
+    $img_url = $db_product["img-url"];
 
 
-    $product = new Product($title, $description, $price, $db_img_url, $id);
+    $product = new Product($title, $description, $price, $img_url, $id);
 
     return $product;
   }

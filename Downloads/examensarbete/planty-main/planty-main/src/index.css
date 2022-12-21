@@ -45,7 +45,14 @@ code {
 }
 
 .page-under-title {
-  
+  display: block;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(72, 122, 106);
+  text-decoration: none;
+  color: rgb(171, 215, 180);
 }
 
 .navigation {

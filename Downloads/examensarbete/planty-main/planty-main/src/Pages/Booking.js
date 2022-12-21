@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Calendar from 'react-calendar';
-import Time from './Time.js'
+import Time from '../Components/Time.js'
 
 
 function Booking() {
