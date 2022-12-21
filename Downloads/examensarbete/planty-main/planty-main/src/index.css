@@ -26,27 +26,26 @@ code {
     sans-serif;
 }
 
- 
+
 
 
 .header {
-  height: 350px;
+  margin-top: -20px;
   background-color: rgb(72, 122, 106);
   color: #fff;
 }
 .page-title {
-  position: relative;
   display: flex;
   justify-content: center;
-  margin-bottom: 150px;
-  color: rgb(196, 215, 200);
+  margin-bottom: 50px;
+  color: rgb(104, 40, 177);
   font-size: 50px;
   z-index: 1;
 }
 
 .page-under-title {
   display: block;
-  height: 250px;
+  height: 80px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -86,11 +85,11 @@ text-decoration: none;
 
 .footer {
   display: block;
-  margin-top: 200px;
-  height: 250px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 500px;
+  height: 80px;
   background-color: rgb(72, 122, 106);
   text-decoration: none;
   color: rgb(171, 215, 180);
