@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 
 function Product ({setCartProducts, cartProducts}) {
-    const [product, setProduct] = useState([]);
+   /*  const [product, setProduct] = useState([]);
     const params = useParams();
     const [quantity, setQuantity] = useState("")
 
@@ -12,7 +12,7 @@ function Product ({setCartProducts, cartProducts}) {
 
     const fetchData = async () => {
         try {
-            const response = await fetch("http://localhost/planty-backend/Products.php?id"+ params.testid);
+            const response = await fetch("http://localhost/planty-backend/product.php?id="+ params.testid);
             const data = await response.json();
 
             setProduct(data);
@@ -70,7 +70,7 @@ function Product ({setCartProducts, cartProducts}) {
             </div>
   
         </div>
-    )
+    ) */
 }
 
 

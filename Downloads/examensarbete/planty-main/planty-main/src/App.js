@@ -12,15 +12,16 @@ import Header from "./Components/Header"
 import Footer from "./Components/Footer"
 import Products from './Pages/Products';
 import Product from './Pages/Product';
-
+import Home from './Pages/Home';
 function App() {
 
   const [cartProducts, setCartProducts] = useState([]);
 
   const fetchData = async () => {
     try {
-        const response = await fetch('http://localhost/planty-backend/Products.php');
+        const response = await fetch('http://localhost:80/planty-backend/Products.php');
         const data = await response.json();
+        console.log(data)
         
         setCartProducts(data);
     } catch(error) {
@@ -37,10 +38,9 @@ useEffect( () => {
    return (
     <div className="App">
    <Header/>
-
   <BrowserRouter>
   <Routes>
-
+  <Route path="/Home" element={<Home />} /> 
   <Route path="/Contact" element={<Contact />} /> 
   <Route path="/About" element={<About />} /> 
   <Route path="/Booking" element={<Booking />} /> 

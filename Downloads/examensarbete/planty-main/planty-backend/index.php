@@ -1,0 +1,1 @@
+http://localhost/planty-main/php/pages/product.php?id=1
