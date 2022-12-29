@@ -1,20 +1,18 @@
 import React, {useEffect, useState} from "react"
 import Product from "./Product";
-
+import ProductsContainer from "../Components/ProductsContainer";
 
 function Products({setCartProducts, cartProducts}) {
   const [products, setProducts] = useState([]);
 
-// -------------- API --------------------- 
+// ---------- API --------------------- 
   const fetchData = async () => {
       try {
-          const response = await fetch('http://localhost:80/planty-backend/Products.php');
+          const response = await fetch('planty-backend/Products.php');
           const data = await response.json();
+          
           setProducts(data);
-          console.log(data)
-
-      } catch(error) {
-          console.log(error);
+      } catch(error){
       }
   }
 
@@ -23,16 +21,15 @@ function Products({setCartProducts, cartProducts}) {
   }, [])
 
   return (
+    <ProductsContainer>
+        {
             products.map((product) => (
               <div key={product.id}>
-               <Product 
-               product={product}
-               setCartProducts={setCartProducts} 
-               cartProducts={cartProducts}
-               /> 
-
+              <Product product={product}/>
               </div>
-            ))  
+            ))
+        }
+    </ProductsContainer>
   )
 }
 

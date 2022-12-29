@@ -19,13 +19,12 @@ function App() {
 
   const fetchData = async () => {
     try {
-        const response = await fetch('http://localhost:80/planty-backend/Products.php');
+        const response = await fetch('planty-backend/Products.php');
         const data = await response.json();
         console.log(data)
         
         setCartProducts(data);
     } catch(error) {
-        console.log(error);
     }
 }
 
@@ -38,6 +37,7 @@ useEffect( () => {
    return (
     <div className="App">
    <Header/>
+
   <BrowserRouter>
   <Routes>
   <Route path="/Home" element={<Home />} /> 
@@ -45,12 +45,11 @@ useEffect( () => {
   <Route path="/About" element={<About />} /> 
   <Route path="/Booking" element={<Booking />} /> 
   <Route path="/Cart" element={<Cart />} /> 
-  <Route path="/Products" element={<Products />} /> 
+  <Route path="/Our products" element={<Products />} /> 
   <Route path="/Product" element={<Product />} /> 
-
-
   </Routes>
   </BrowserRouter>
+
    <Footer/>
 </div>
   );

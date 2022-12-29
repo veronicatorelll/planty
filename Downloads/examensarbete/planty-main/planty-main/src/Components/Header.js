@@ -19,10 +19,10 @@ function Header() {
  <Link to ="/About">About us</Link>
  <Link to ="/Products">Our products</Link>
  <Link to ="/Booking">Book us</Link>
- <Link to ="/Cart">Cart</Link> 
+ <Link to ="/Cart"> <FaShoppingCart/></Link> 
+
 
  </BrowserRouter>
-<FaShoppingCart/>
     </div>
     </div>
   )

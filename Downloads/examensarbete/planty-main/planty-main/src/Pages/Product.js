@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 
 function Product ({setCartProducts, cartProducts}) {
-   /*  const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState([]);
     const params = useParams();
     const [quantity, setQuantity] = useState("")
 
@@ -70,7 +70,7 @@ function Product ({setCartProducts, cartProducts}) {
             </div>
   
         </div>
-    ) */
+    )
 }
 
 
