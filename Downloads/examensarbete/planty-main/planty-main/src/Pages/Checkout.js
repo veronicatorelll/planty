@@ -32,11 +32,61 @@ function Checkout({cartProducts, setCartProducts}) {
           }
       };
 
+       // ------ Handle quantity input ------
+    const handleQuantityInput = (e) => {
+      setQuantity(e.target.value)
+      
+    } 
   return (
-    <div>
-        <h1>Checkout</h1>
-    </div>
-  )
-}
+    <div className='cart'>
 
+
+{
+              cartProducts.map(product =>              
+              {
+    
+                if(product.cart === true) {
+                  total += product.price  * product.quantity
+                   return <div key={product.id}>
+                   
+                      <p className='checkout-title'>Title: {product.title}</p>
+                      <p className='checkout-price'>Price: {product.price}$</p>
+                      <p className='checkout-quantity'>Quantity: {product.quantity}</p>
+                      <div className='cart-wrap'>
+                    <div className="cartpicture">
+                      <img src={product.url} alt="" />
+                    </div>
+                    <button className='remove-checkout' onClick={() => removeFromCart(product.id )}>X</button>
+
+            <form onSubmit={(e) => addToCart(e, product.id)}>
+               <label className='label-addcart'>
+                 <input type="number" min="1" placeholder='wanted amount...' name="quantity" onChange={handleQuantityInput} value={quantity.id}/>
+                  </label>
+                   <button className='addtocart'>Update quantity</button>
+                    </form>
+                    </div>
+
+                    </div>
+                } else { return console.log("checkout trouble") } 
+                
+              })
+          };
+
+<div className='total'>
+         
+         {
+           total <1
+           ?  "You have 0 products."
+           : `Total: ${total}$` 
+           
+         }
+ 
+         </div>
+                   <Link className='continue' to ="/">Continue shopping!</Link>
+           </div>
+ 
+   )
+ }
+ 
+  
 export default Checkout
