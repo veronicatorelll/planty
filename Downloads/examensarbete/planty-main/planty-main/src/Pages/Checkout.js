@@ -15,8 +15,23 @@ function Checkout({cartProducts, setCartProducts}) {
     ? {...product, cart: false}
     : product
   ))
-  }
+  };
+
+    // ------ Add to Checkout ------
+    const addToCart = (e, id) => {
+      e.preventDefault();
+      if (cartProducts.length > 0) {
+          setCartProducts(cartProducts.map((product)=> product.id === id
+              ? {...product, cart: true, quantity: quantity}
+              : product
+              ))
+              setQuantity("")
   
+          } else {
+              setCartProducts(product)
+          }
+      };
+
   return (
     <div>
         <h1>Checkout</h1>
