@@ -1,6 +1,22 @@
-import React from 'react'
+import useState from 'react'
+import { Link } from 'react-router-dom'
 
-function Checkout() {
+function Checkout({cartProducts, setCartProducts}) {
+
+  var total = 0
+  const [product, setProduct] = useState([]);
+  const [quantity, setQuantity] = useState("")
+
+
+  // ------ Delete from Checkout ------
+  const removeFromCart = id => {
+    console.log(id)
+    setCartProducts(cartProducts.map((product) => product.id === id
+    ? {...product, cart: false}
+    : product
+  ))
+  }
+  
   return (
     <div>
         <h1>Checkout</h1>

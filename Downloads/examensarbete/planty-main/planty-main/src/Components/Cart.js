@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import {CartImage, CartProductsContainer, CartPriceQty, CartButton, CartTotal, LinkContainer} from "../styles/styledCart"
+import {CartImage, CartProductsContainer, CartPriceQty, CartButton, CartTotal, LinkContainer} from "../Styles/cartStyle"
 
 function Cart({cartProducts, setCartProducts, setToggleCart, toggleCart}) {
   var total = 0
