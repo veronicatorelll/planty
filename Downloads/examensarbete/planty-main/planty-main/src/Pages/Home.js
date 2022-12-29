@@ -4,7 +4,7 @@ function Home() {
   return (
     <div>
         <h1>Green for sustainability.</h1>
-        <p>Nobody wants a worl without plants. It can only get better with more of them. </p>
+        <p>Nobody wants a world without plants. It can only get better with more of them. </p>
 
             <button>Contact us</button>
 

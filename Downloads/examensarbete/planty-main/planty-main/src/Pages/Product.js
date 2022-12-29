@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
+import Products from './Products';
 
 
 
@@ -12,12 +13,11 @@ function Product ({setCartProducts, cartProducts}) {
 
     const fetchData = async () => {
         try {
-            const response = await fetch("http://localhost/planty-backend/product.php?id="+ params.testid);
+            const response = await fetch("https://codexplained.se/shoes.php?id=234967"+ params.testid);
             const data = await response.json();
 
             setProduct(data);
         } catch(error) {
-            console.log(error);
         }
     }
 
@@ -72,6 +72,4 @@ function Product ({setCartProducts, cartProducts}) {
         </div>
     )
 }
-
-
 export default Product

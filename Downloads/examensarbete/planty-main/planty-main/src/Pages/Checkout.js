@@ -83,6 +83,7 @@ function Checkout({cartProducts, setCartProducts}) {
  
          </div>
                    <Link className='continue' to ="/">Continue shopping!</Link>
+         
            </div>
  
    )

@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, BrowserRouter}  from 'react-router-dom';
 import Booking from "../Pages/Booking"
 import Cart from './Cart';
+import Checkout from '../Pages/Checkout';
 import {FaShoppingCart} from "react-icons/fa"
 
 
@@ -20,6 +21,9 @@ function Header() {
  <Link to ="/Products">Our products</Link>
  <Link to ="/Booking">Book us</Link>
  <Link to ="/Cart"> <FaShoppingCart/></Link> 
+ <Link to ="/Checkout">Checkout</Link>
+
+ 
 
 
  </BrowserRouter>

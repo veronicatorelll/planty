@@ -13,13 +13,14 @@ import Footer from "./Components/Footer"
 import Products from './Pages/Products';
 import Product from './Pages/Product';
 import Home from './Pages/Home';
+import Checkout from './Pages/Checkout';
 function App() {
 
   const [cartProducts, setCartProducts] = useState([]);
 
   const fetchData = async () => {
     try {
-        const response = await fetch('planty-backend/Products.php');
+        const response = await fetch('https://codexplained.se/shoes.php');
         const data = await response.json();
         console.log(data)
         
@@ -45,8 +46,10 @@ useEffect( () => {
   <Route path="/About" element={<About />} /> 
   <Route path="/Booking" element={<Booking />} /> 
   <Route path="/Cart" element={<Cart />} /> 
-  <Route path="/Our products" element={<Products />} /> 
+  <Route path="/Products" element={<Products />} /> 
   <Route path="/Product" element={<Product />} /> 
+  <Route path="/Checkout" element={<Checkout />} /> 
+
   </Routes>
   </BrowserRouter>
 

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import {CartImage, CartProductsContainer, CartPriceQty, CartButton, CartTotal, LinkContainer} from "../Styles/cartStyle"
+import Header from './Header'
 
 function Cart({cartProducts, setCartProducts, setToggleCart, toggleCart}) {
   var total = 0
