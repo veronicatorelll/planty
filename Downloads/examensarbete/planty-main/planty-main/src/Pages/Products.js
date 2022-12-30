@@ -8,7 +8,7 @@ function Products({setCartProducts, cartProducts}) {
 // ---------- API --------------------- 
   const fetchData = async () => {
       try {
-          const response = await fetch('https://codexplained.se/shoes.php');
+          const response = await fetch('http://localhost/planty-backend/Products.php');
           const data = await response.json();
           
           setProducts(data);
@@ -23,12 +23,12 @@ function Products({setCartProducts, cartProducts}) {
   return (
             products.map((product) => (
               <div key={product.id} >
+                <a href="/Product=id?">
                 <div>{product.title}</div>
+                </a>
                 <div>{product.description}</div>
-                <div>{product.price}</div>
-                <div>{product.url}</div>
-
-
+                <div>{product.price} :- </div>
+                <img height={300} src={product.img_url} alt="" />
               <Product product={product}/>
               </div>
             ))

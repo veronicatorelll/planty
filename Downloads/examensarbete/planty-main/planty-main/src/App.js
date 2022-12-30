@@ -20,7 +20,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-        const response = await fetch('https://codexplained.se/shoes.php');
+        const response = await fetch('http://localhost/planty-backend/Products.php');
         const data = await response.json();
         console.log(data)
         

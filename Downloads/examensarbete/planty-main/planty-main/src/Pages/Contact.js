@@ -1,6 +1,4 @@
 import React from 'react';
-// import img2 from "/Users/intern.pc1/typescript-demo/my-app/src/assets/img2.jpg"
-
 
 function Contact() {
   return (
@@ -15,10 +13,6 @@ It could also include your professional profile, if you have one and if necessar
 During the hiring process, employers use the contact info listed on your resume to provide 
 updates about your job application, including getting in touch to schedule initial interviews and filling out paperwork regarding your pending employment.
         
-        
-        <div className='img2'>  
-        {/* <img src={img2} alt="logo"/> */}
-        </div>
         </div>
 
         <div className='customer-service'>
