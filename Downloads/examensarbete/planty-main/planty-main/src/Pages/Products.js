@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react"
+import { Link } from "react-router-dom";
 import Product from "./Product";
 import ProductsContainer from "../Components/ProductsContainer";
 
 function Products({setCartProducts, cartProducts}) {
   const [products, setProducts] = useState([]);
+  
+
 
 // ---------- API --------------------- 
   const fetchData = async () => {
@@ -23,15 +26,17 @@ function Products({setCartProducts, cartProducts}) {
   return (
             products.map((product) => (
               <div key={product.id} >
-                <a href="/Product=id?">
-                <div>{product.title}</div>
-                </a>
+                <Link to={`/product/${product.id}`}>
+                <h2>{product.title}</h2>
+                </Link>
                 <div>{product.description}</div>
                 <div>{product.price} :- </div>
                 <img height={300} src={product.img_url} alt="" />
-              <Product product={product}/>
+               {/* <Product product={product}/>  */}
               </div>
             ))
+
+
   )
 }
 

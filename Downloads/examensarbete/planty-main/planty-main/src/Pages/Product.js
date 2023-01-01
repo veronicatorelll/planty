@@ -1,19 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import { useParams } from "react-router-dom";
-import Products from './Products';
+import { useParams, Link } from "react-router-dom";
 
 
 
 function Product ({setCartProducts, cartProducts}) {
     const [product, setProduct] = useState([]);
     const params = useParams();
-    const [quantity, setQuantity] = useState("")
-
+    // const [quantity, setQuantity] = useState("")
+  
 // ------ API ------
 
     const fetchData = async () => {
         try {
-            const response = await fetch("http://localhost/planty-backend/Products.php?id="+ params.testid);
+            const response = await fetch("http://localhost/planty-backend/product.php?id="+ params.prodId);
             const data = await response.json();
 
             setProduct(data);
@@ -50,23 +49,20 @@ function Product ({setCartProducts, cartProducts}) {
    }  */
        
 
-  return (
-        <div>
+  return (       
+   
+    <div>
 
-            <div className='product-wrap'>
             <div className="productpic">
-            <img src={product.img_url} alt=""/>
+            <img height={300} src={product.img_url} alt="" />
             </div>
-            
-      {/*     <form onSubmit={(e) => addToCart(e, product.id)}>
-                <label className='label-addcart'>
-                 <input type="number" name="quantity" onChange={handleQuantityInput} value={quantity}/>
-                </label>
-                 <button className='addtocart'>Add to cart</button>
-                  </form>  */}
-            </div>
-  
-        </div>
-    )
+            <h3>{product.title}</h3>
+            <p>{product.description}</p>
+            <p>{product.price}</p>
+            <p>Text skriven från Product.js</p>
+
+    </div>
+    
+  )
 }
 export default Product

@@ -22,7 +22,7 @@ function App() {
     try {
         const response = await fetch('http://localhost/planty-backend/Products.php');
         const data = await response.json();
-        console.log(data)
+        // console.log(data)
         
         setCartProducts(data);
     } catch(error) {
@@ -38,6 +38,7 @@ useEffect( () => {
    return (
     <div className="App">
    <Header/>
+  
 
   <BrowserRouter>
   <Routes>
@@ -47,9 +48,8 @@ useEffect( () => {
   <Route path="/Booking" element={<Booking />} /> 
   <Route path="/Cart" element={<Cart />} /> 
   <Route path="/Products" element={<Products />} /> 
-  <Route path="/Product" element={<Product />} /> 
+  <Route path="/Product/:prodId" element ={<Product/>} /> 
   <Route path="/Checkout" element={<Checkout />} /> 
-
   </Routes>
   </BrowserRouter>
 
