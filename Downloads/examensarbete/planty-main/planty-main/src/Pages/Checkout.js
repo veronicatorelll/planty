@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Checkout({cartProducts, setCartProducts}) {
 
-  var total = 0
+  var total = 0;
   const [product, setProduct] = useState([]);
-  const [quantity, setQuantity] = useState("")
+  const [quantity, setQuantity] = useState("");
 
 
   // ------ Delete from Checkout ------
@@ -54,7 +54,7 @@ function Checkout({cartProducts, setCartProducts}) {
                       <p className='checkout-quantity'>Quantity: {product.quantity}</p>
                       <div className='cart-wrap'>
                     <div className="cartpicture">
-                      <img src={product.url} alt="" />
+                      <img src={product.img_url} alt="" />
                     </div>
                     <button className='remove-checkout' onClick={() => removeFromCart(product.id )}>X</button>
 
@@ -82,7 +82,7 @@ function Checkout({cartProducts, setCartProducts}) {
          }
  
          </div>
-                   <Link className='continue' to ="/">Continue shopping!</Link>
+                   <Link className='continue' to ="/Products">Continue shopping!</Link>
          
            </div>
  

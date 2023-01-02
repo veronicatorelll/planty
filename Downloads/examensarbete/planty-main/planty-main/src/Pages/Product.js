@@ -6,7 +6,7 @@ import { useParams, Link } from "react-router-dom";
 function Product ({setCartProducts, cartProducts}) {
     const [product, setProduct] = useState([]);
     const params = useParams();
-    // const [quantity, setQuantity] = useState("")
+    const [quantity, setQuantity] = useState("")
   
 // ------ API ------
 
@@ -26,27 +26,28 @@ function Product ({setCartProducts, cartProducts}) {
     
 
 // ------ Add to Cart ------
-   /*   const addToCart = (e, id) => {
+    const addToCart = (e, id) => {
         e.preventDefault();
         if (cartProducts.length > 0) {
-            setCartProducts(cartProducts.map((product)=> product.id === id
+            setCartProducts(cartProducts?.map((product)=> product.id == id
                 ? {...product, cart: true, quantity: quantity}
                 : product
                 ))
+                console.log("Add to cart")
                 setQuantity("")
 
             } else {
                 setCartProducts(product)
             }
-        }      */  
+        }      
         
        
 // ------ Handle quantity input ------
- /* 
+ 
     const handleQuantityInput = (e) => {
      setQuantity(e.target.value)
      
-   }  */
+   }  
        
 
   return (       
@@ -57,9 +58,16 @@ function Product ({setCartProducts, cartProducts}) {
             <img height={300} src={product.img_url} alt="" />
             </div>
             <h3>{product.title}</h3>
+            <p>{product.price} :- </p>
             <p>{product.description}</p>
-            <p>{product.price}</p>
-            <p>Text skriven från Product.js</p>
+
+
+            <form onSubmit={(e) => addToCart(e, product.id)}>
+            <label>
+            <input type="number" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            </label>
+            <button> Add to cart </button>
+            </form>
 
     </div>
     

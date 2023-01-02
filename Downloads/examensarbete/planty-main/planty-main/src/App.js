@@ -14,7 +14,12 @@ import Products from './Pages/Products';
 import Product from './Pages/Product';
 import Home from './Pages/Home';
 import Checkout from './Pages/Checkout';
+
+
+
 function App() {
+
+  // ----- Cart State ------
 
   const [cartProducts, setCartProducts] = useState([]);
 
@@ -37,19 +42,19 @@ useEffect( () => {
 
    return (
     <div className="App">
-   <Header/>
+   <Header cartProducts={cartProducts} setCartProducts={setCartProducts}/>
   
 
   <BrowserRouter>
   <Routes>
-  <Route path="/Home" element={<Home />} /> 
+  <Route path="/" element={<Home />} /> 
   <Route path="/Contact" element={<Contact />} /> 
   <Route path="/About" element={<About />} /> 
   <Route path="/Booking" element={<Booking />} /> 
-  <Route path="/Cart" element={<Cart />} /> 
-  <Route path="/Products" element={<Products />} /> 
-  <Route path="/Product/:prodId" element ={<Product/>} /> 
-  <Route path="/Checkout" element={<Checkout />} /> 
+  <Route path="/Cart" element={<Cart />} />  
+  <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
+  <Route path="/Product/:prodId" element ={<Product cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
+  <Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
   </Routes>
   </BrowserRouter>
 

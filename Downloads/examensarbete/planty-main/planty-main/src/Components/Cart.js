@@ -1,81 +1,89 @@
 import { Link } from 'react-router-dom'
-import {CartImage, CartProductsContainer, CartPriceQty, CartButton, CartTotal, LinkContainer} from "../Styles/cartStyle"
+import { useState } from 'react';
 import Header from './Header'
 
-function Cart({cartProducts, setCartProducts, setToggleCart, toggleCart}) {
+function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
   var total = 0
 
+
+
   // ---------- Delete from Cart ---------------------
-  const removeFromCart = id => {
-    console.log(id)
-    setCartProducts(cartProducts.map((product) => product.id === id
+   const removeFromCart = id => {
+    setCartProducts(cartProducts?.map((product) => product.id === id
     ? {...product, cart: false}
     : product
   ))
-  }
+  } 
 
   // ---------- Delete All ---------------------
     const deleteAll = () => {
-      setCartProducts(cartProducts.map((product) => product.cart === true
+      setCartProducts(cartProducts?.map((product) => product.cart === true
       ? {...product, cart: false}
       : product
     ))
    }
 
    // ---------- Toggle Cart ---------------------
-  const handleToggleCart = () => {
+  const handleToggleCart = (e) => {
+    e.preventDefault();
     setToggleCart(!toggleCart)
   }
 
   return (
     <div className="cart">
-      <h2>Cart</h2>
-        {
-            cartProducts.map(product =>              
-            {
-  
-              if(product.cart === true) {
-                total += product.price * product.quantity
-                return <CartProductsContainer key={product.id}>
-                    <h3>{product.title}</h3>
-                    <CartPriceQty>
-                      <p>Price: {product.price}$</p>
-                      <p>Quantity: {product.quantity}</p>
-                    </CartPriceQty>
-                    <div> 
-                      <CartImage src={product.url} alt="missing picture"/> 
-                    </div>
+      <h4>Cart</h4>
 
-                    <CartButton className='remove-cart' onClick={() => removeFromCart(product.id)}>Remove From Cart</CartButton>
 
-                  </CartProductsContainer>
-              } else { return console.log("No items in cart") } 
-              
-            })
-        }
+
       
-      <CartTotal>
+      {             
+      cartProducts.map(product => {
+      if(product.cart === true) 
+      { 
+        total += product.price * product.quantity
+
+                         return ( 
+                         <div key={product.id}>                    
+                          <h3>{product.title}</h3>                       
+                          <p>{product.price} :- </p>                       
+                          <p>Quantity: {product.quantity}</p>                     
+                          <div>                      
+                    <img src={product.img_url} alt=""/>                      
+                    </div>                                           
+                      <button className='remove-cart' onClick={() => removeFromCart(product.id)}>Remove From Cart</button> 
+                 </div>
+              ) } else {
+               return console.log("No items in cart") }
+        })
+      }
+
+
+
+
+
+
+
+
+     
         {
           total < 1
-          ? "No items In Cart"
-          : `Cart Total: ${total}$` 
+          ? "0 items in cart"
+          : `Total: ${total} :-` 
         }
-      </CartTotal>
       
-      <CartButton className='delete-cart' onClick={deleteAll}>Remove All Products From Cart</CartButton>
-      <LinkContainer>
+      <button className='delete-cart' onClick={deleteAll}>Empty cart</button>
+
         <Link className='link-checkout' to="/checkout">
-          <CartButton onClick={handleToggleCart}>
+          <button onClick={handleToggleCart}>
             Go to Checkout
-          </CartButton>
+          </button>
         </Link>
         
-        <Link className='link-backprod' to ="/">
-          <CartButton onClick={handleToggleCart}>
+        <Link to ="/Products">
+          <button onClick={handleToggleCart}>
             Go back to Products
-          </CartButton>
-        </Link>
-      </LinkContainer>
+          </button>
+        </Link> 
 
       </div>
   )
