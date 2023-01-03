@@ -1,4 +1,4 @@
-import useState from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 function Checkout({cartProducts, setCartProducts}) {
@@ -21,7 +21,7 @@ function Checkout({cartProducts, setCartProducts}) {
     const addToCart = (e, id) => {
       e.preventDefault();
       if (cartProducts.length > 0) {
-          setCartProducts(cartProducts.map((product)=> product.id === id
+          setCartProducts(cartProducts?.map((product)=> product.id == id
               ? {...product, cart: true, quantity: quantity}
               : product
               ))
@@ -39,6 +39,7 @@ function Checkout({cartProducts, setCartProducts}) {
     } 
   return (
     <div className='cart'>
+      <h2>Checkout</h2>
 
 
 {
@@ -47,14 +48,14 @@ function Checkout({cartProducts, setCartProducts}) {
     
                 if(product.cart === true) {
                   total += product.price  * product.quantity
-                   return <div key={product.id}>
-                   
+
+                   return (<div key={product.id}>
                       <p className='checkout-title'>Title: {product.title}</p>
                       <p className='checkout-price'>Price: {product.price}$</p>
                       <p className='checkout-quantity'>Quantity: {product.quantity}</p>
                       <div className='cart-wrap'>
                     <div className="cartpicture">
-                      <img src={product.img_url} alt="" />
+                    <img height={90} src={product.img_url} alt="" />
                     </div>
                     <button className='remove-checkout' onClick={() => removeFromCart(product.id )}>X</button>
 
@@ -65,29 +66,26 @@ function Checkout({cartProducts, setCartProducts}) {
                    <button className='addtocart'>Update quantity</button>
                     </form>
                     </div>
-
                     </div>
-                } else { return console.log("checkout trouble") } 
+              )} else 
+                { return console.log("checkout trouble") } 
                 
               })
-          };
+          }
 
 <div className='total'>
-         
          {
            total <1
            ?  "You have 0 products."
-           : `Total: ${total}$` 
-           
+           : `Total: ${total} :-` 
          }
  
          </div>
-                   <Link className='continue' to ="/Products">Continue shopping!</Link>
-         
+          <Link className='continue' to ="/Products">Continue shopping!</Link>
+          <Link className='payment' to ="/Payment">To payment!</Link>
+
            </div>
- 
    )
  }
- 
   
 export default Checkout

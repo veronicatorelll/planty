@@ -30,8 +30,9 @@ function Header({cartProducts, setCartProducts}) {
  {/* <Link to ="/Cart"> <FaShoppingCart/></Link>  */}
  <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/>
     <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
+    <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
 
- <Link to ="/Checkout">Checkout</Link>
+    <Link path="/Checkout" element={<Checkout cartProducts={cartProducts}setCartProducts={setCartProducts}/>} /> 
  </BrowserRouter>
     </div>
     </div>

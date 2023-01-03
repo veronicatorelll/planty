@@ -27,6 +27,8 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
   const handleToggleCart = (e) => {
     e.preventDefault();
     setToggleCart(!toggleCart)
+    console.log("checkout")
+
   }
 
   return (
@@ -48,12 +50,11 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <p>{product.price} :- </p>                       
                           <p>Quantity: {product.quantity}</p>                     
                           <div>                      
-                    <img src={product.img_url} alt=""/>                      
+                          <img height={90} src={product.img_url} alt="" />
                     </div>                                           
                       <button className='remove-cart' onClick={() => removeFromCart(product.id)}>Remove From Cart</button> 
                  </div>
-              ) } else {
-               return console.log("No items in cart") }
+              ) } 
         })
       }
 
@@ -73,15 +74,16 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
       
       <button className='delete-cart' onClick={deleteAll}>Empty cart</button>
 
-        <Link className='link-checkout' to="/checkout">
+      <Link className='link-checkout' to="Checkout">
           <button onClick={handleToggleCart}>
             Go to Checkout
           </button>
         </Link>
         
+        
         <Link to ="/Products">
           <button onClick={handleToggleCart}>
-            Go back to Products
+            Continue shopping!
           </button>
         </Link> 
 
