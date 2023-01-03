@@ -58,13 +58,6 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
         })
       }
 
-
-
-
-
-
-
-
      
         {
           total < 1

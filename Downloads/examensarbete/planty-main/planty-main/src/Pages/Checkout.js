@@ -8,6 +8,9 @@ function Checkout({cartProducts, setCartProducts}) {
   const [quantity, setQuantity] = useState("");
 
 
+
+
+  
   // ------ Delete from Checkout ------
   const removeFromCart = id => {
     console.log(id)
@@ -40,7 +43,7 @@ function Checkout({cartProducts, setCartProducts}) {
   return (
     <div className='cart'>
       <h2>Checkout</h2>
-
+     
 
 {
               cartProducts.map(product =>              
