@@ -54,7 +54,7 @@ function Checkout({cartProducts, setCartProducts}) {
 
                    return (<div key={product.id}>
                       <p className='checkout-title'>Title: {product.title}</p>
-                      <p className='checkout-price'>Price: {product.price}$</p>
+                      <p className='checkout-price'>Price: {product.price}:-</p>
                       <p className='checkout-quantity'>Quantity: {product.quantity}</p>
                       <div className='cart-wrap'>
                     <div className="cartpicture">
@@ -84,7 +84,8 @@ function Checkout({cartProducts, setCartProducts}) {
          }
  
          </div>
-          <Link className='continue' to ="/Products">Continue shopping!</Link>
+          <Link className='continue' to ="/Products">Continue shopping</Link>
+          <br></br>
           <a href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'>To payment</a>
 
            </div>

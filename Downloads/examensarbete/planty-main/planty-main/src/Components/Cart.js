@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react';
 import Header from './Header'
+import Checkout from '../Pages/Checkout';
 
 function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
   var total = 0
@@ -32,14 +33,10 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
   }
 
   return (
-    <div className="cart">
-      <h4>Cart</h4>
+    <div className="cart-container">
 
-
-
-      
       {             
-      cartProducts.map(product => {
+      cartProducts?.map(product => {
       if(product.cart === true) 
       { 
         total += product.price * product.quantity
@@ -53,6 +50,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <img height={90} src={product.img_url} alt="" />
                     </div>                                           
                       <button className='remove-cart' onClick={() => removeFromCart(product.id)}>Remove From Cart</button> 
+
                  </div>
               ) } 
         })
@@ -64,21 +62,24 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
           ? "0 items in cart"
           : `Total: ${total} :-` 
         }
-      
-      <button className='delete-cart' onClick={deleteAll}>Empty cart</button>
 
-      <Link className='link-checkout' to="Checkout">
+        <br></br>
+                  <Link  to ="/Checkout">Checkout</Link>
+
+
+
+      {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/> */}
+
+
+     {/*  <Link className='link-checkout' to="/Checkout">
           <button onClick={handleToggleCart}>
             Go to Checkout
           </button>
-        </Link>
+        </Link> */}
         
         
-        <Link to ="/Products">
-          <button onClick={handleToggleCart}>
-            Continue shopping!
-          </button>
-        </Link> 
+        
+      
 
       </div>
   )

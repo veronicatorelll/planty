@@ -7,6 +7,8 @@ import Product from '../Pages/Product';
 import ProductComponent from './ProductComponent';
 import {DropdownCart, Dropdown} from "../Styles/headerStyle"
 import {FaShoppingCart} from "react-icons/fa"
+import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/thelogo.png"
+
 
 
 
@@ -19,21 +21,20 @@ function Header({cartProducts, setCartProducts}) {
   }
 
   return (
-<div className='header'>
-<h3 className='page-under-title'> HEADER </h3>
+<div>
+  <div className='logo'>
+<img height={200} width ={400} src={logo} alt="Logo" />
+</div>
 
 <div className='navigation'>
-
  <BrowserRouter>
- <Link to ="/Home">Home</Link> 
+ <Link to ="/Home">Home</Link>
  <Link to ="/About">About us</Link>
  <Link to ="/Products">Our products</Link> 
- {/* <Link to ="/Cart"> <FaShoppingCart/></Link>  */}
- <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/>
-    <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
-    <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
-
-    <Link path="/Checkout" element={<Checkout cartProducts={cartProducts}setCartProducts={setCartProducts}/>} /> 
+ <Link className='cart-icon' to ="/Cart"> <FaShoppingCart/> <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
+</Link> 
+ {/* <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/> */}
+   
  </BrowserRouter>
     </div>
     </div>

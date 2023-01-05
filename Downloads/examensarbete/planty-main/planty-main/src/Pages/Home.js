@@ -1,19 +1,40 @@
 import React from 'react'
+import hero from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/home.jpg"
+import offer4 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer4.png"
+import offer2 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer2.png"
+import offer3 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer3.png"
+
+
 
 function Home() {
   return (
     <div>
-        <h1>Green for sustainability.</h1>
-        <p>Nobody wants a world without plants. It can only get better with more of them. </p>
+        <p className='home-title'>Green for sustainability.</p>
+        <p className='home-p'>Nobody wants a world without plants. It can only get better with more of them. </p>
 
-            <button>Contact us</button>
+           <div className='contact-btn-container'> 
+           <button className='contact-button'>Contact us</button>
+           </div> 
 
-            <br></br>
             
-            *** BILD ***
+           <div className='hero'>
+         <img className='hero-home' src={hero} alt="hero" />
+        </div>
 
-            <p>OUR OFFERING</p>
-            <h3>What you can get at Planty</h3>
+            <p className='offering'>OUR OFFERING</p>
+            <p className='get'>What you can get at Planty</p>
+            <div className='offer-img'>
+            <img height={300} className='' src={offer2} alt="" />
+            <img height={300} className='' src={offer4} alt="" />
+            <img height={300} className='' src={offer3} alt="" />
+            </div>
+
+            <div className='info-offering'>
+            <p className='offer-p'> Home visits for watering </p>
+            <p> High quality potted plants </p>
+            <p> Care advice and tips </p>
+            </div>
+
 
             
     </div>
