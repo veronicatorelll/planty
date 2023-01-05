@@ -15,6 +15,7 @@ import Product from './Pages/Product';
 import Home from './Pages/Home';
 import Checkout from './Pages/Checkout';
 import Payment from './Pages/Payment';
+import OrderConf from './Pages/OrderConf';
 
 
 function App() {
@@ -53,6 +54,8 @@ useEffect( () => {
   <Route path="/Booking" element={<Booking />} /> 
   <Route path="/Cart" element={<Cart />} />  
   <Route path="/Payment" element={<Payment />} />  
+  <Route path="/OrderConf" element={<OrderConf />} />  
+
 
   {/* <Route path="/Payment" element={<Payment />} />   */}
   <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 

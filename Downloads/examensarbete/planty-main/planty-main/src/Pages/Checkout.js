@@ -85,7 +85,7 @@ function Checkout({cartProducts, setCartProducts}) {
  
          </div>
           <Link className='continue' to ="/Products">Continue shopping!</Link>
-          <Link className='payment' to ="/Payment">To payment!</Link>
+          <a href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'>To payment</a>
 
            </div>
    )

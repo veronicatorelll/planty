@@ -9,6 +9,7 @@ import {DropdownCart, Dropdown} from "../Styles/headerStyle"
 import {FaShoppingCart} from "react-icons/fa"
 
 
+
 function Header({cartProducts, setCartProducts}) {
   const [toggleCart, setToggleCart] = useState(false)
 
@@ -19,8 +20,8 @@ function Header({cartProducts, setCartProducts}) {
 
   return (
 <div className='header'>
- 
 <h3 className='page-under-title'> HEADER </h3>
+
 <div className='navigation'>
 
  <BrowserRouter>
