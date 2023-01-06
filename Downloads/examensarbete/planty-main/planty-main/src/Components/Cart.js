@@ -45,7 +45,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                          <div key={product.id}>                    
                           <h3>{product.title}</h3>                       
                           <p>{product.price} :- </p>                       
-                          <p>Quantity: {product.quantity}</p>                     
+                          <p className='quantity'>{product.quantity}</p>                     
                           <div>                      
                           <img height={90} src={product.img_url} alt="" />
                     </div>                                           
@@ -62,6 +62,11 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
           ? "0 items in cart"
           : `Total: ${total} :-` 
         }
+
+
+
+
+          
 
         <br></br>
                   <Link  to ="/Checkout">Checkout</Link>

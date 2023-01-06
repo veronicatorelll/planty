@@ -383,11 +383,15 @@ position: relative;
 padding: 5px;
 }
 
-.cart-icon{
-  margin-top: 20px;
-  display: block;
+.cart-icon {
+  margin: 0;
 }
 
+
+.quantity {
+  margin-left: -170px;
+  font-size: 12px;
+}
 .home-title {
   font-family: garamond;
   display: flex;
@@ -466,4 +470,15 @@ padding: 5px;
 
 .offer-p{
   margin-left: -10px;
+}
+
+.quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px;
+  border-radius: 12px;
+  background-color: rgb(93, 135, 93);
+  color: white;
+  width: 22px;
 }
