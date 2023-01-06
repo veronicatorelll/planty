@@ -4,6 +4,9 @@ import Header from './Header'
 import Checkout from '../Pages/Checkout';
 
 function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
+
+  const [cart, setCart] = useState([])
+
   var total = 0
 
 

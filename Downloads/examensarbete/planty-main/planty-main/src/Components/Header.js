@@ -15,7 +15,7 @@ import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main
 function Header({cartProducts, setCartProducts}) {
   const [toggleCart, setToggleCart] = useState(false)
 
-  var total = 0
+  var total = 0;
 
 
 
@@ -40,7 +40,7 @@ function Header({cartProducts, setCartProducts}) {
 
 <div className='navigation'>
  <BrowserRouter>
- <Link to ="/Home">Home</Link>
+ <Link to ="/">Home</Link>
  <Link to ="/About">About us</Link>
  <Link to ="/Products">Our products</Link> 
  <div className='cart-icon'>

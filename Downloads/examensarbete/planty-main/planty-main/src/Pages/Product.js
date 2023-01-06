@@ -54,19 +54,23 @@ function Product ({setCartProducts, cartProducts}) {
    
     <div>
 
-            <div className="productpic">
-            <img height={300} src={product.img_url} alt="" />
+            <p className='product-title'>{product.title}</p>
+
+
+            <div className='price-desc-container'>
+            <p className='product-price'>{product.price} kr </p>
+            <p className='product-description'> {product.description}</p>
             </div>
-            <h3>{product.title}</h3>
-            <p>{product.price} :- </p>
-            <p>{product.description}</p>
+            <div className="product-img">
+            <img height={550} src={product.img_url} alt="" />
+            </div>
 
-
-            <form onSubmit={(e) => addToCart(e, product.id)}>
+            <form className='add-cart-container' onSubmit={(e) => addToCart(e, product.id)}>
             <label>
-            <input type="number" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <input className='input-quantity' placeholder= 'amount . . .' type="number" name="quantity" onChange={handleQuantityInput} value={quantity}/>
             </label>
-            <button> Add to cart </button>
+            
+            <button className='add-to-cart'> Add to cart </button>
             </form>
 
     </div>
