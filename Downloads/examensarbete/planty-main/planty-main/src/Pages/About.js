@@ -1,13 +1,15 @@
 import React from 'react';
+import about from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Whatweoffer.png";
+
 
 
 
 function About() {
   return(
-    <div className='about'>
-        <h2 className='title-about'> Where it all began... </h2>
-What seems to be just another page in your sitemap, probably accessible through your header and/or footer, is actually one of your most compelling pieces of content. Or at least, it should be.
-
+    <div className='about-container'>
+        <p className='about-title'> Where it all began... </p>
+        
+        <p className='about-text'> What seems to be just another page in your sitemap, probably accessible through your header and/or footer, is actually one of your most compelling pieces of content. Or at least, it should be.
 Yes, we’re talking about your website’s About Us page.
 
 In some ways, it’s actually more appropriate to refer to this type of page as “Our Brand Story,” or if you want another alternative, “Our Identity.” We like the first one better, but they’re both pretty accurate.
@@ -16,11 +18,15 @@ This is why your About Us page is one of the most important pages on your site. 
 
 This visitor wants to get to know you by listening to the story you have to tell.
 
-The first step to create an authentic, effective about us page that really communicates who you are and what you’re about is perfecting every design detail. First impressions matter and your website needs to dress to impress.
+The first step to create an authentic, effective about us page that really communicates who you are and what you’re about is perfecting every design detail. First impressions matter and your website needs to dress to impress. 
 
-Let’s take a look at 16 of our favorite About Us pages, whose design and content strategy are worth writing home about.
-    <div>
-    </div>
+Let’s take a look at 16 of our favorite About Us pages, whose design and content strategy are worth writing home about. </p>
+
+<div className='about-img'>
+<img height={600} width ={800} src={about} alt="" />
+</div>
+
+
     </div>
   )
 }

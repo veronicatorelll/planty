@@ -43,6 +43,7 @@ function Header({cartProducts, setCartProducts}) {
  <Link to ="/">Home</Link>
  <Link to ="/About">About us</Link>
  <Link to ="/Products">Our products</Link> 
+ <Link to ="/Tips">Tips</Link> 
  <div className='cart-icon'>
  <Link to ="/Cart">  <FaShoppingCart  onClick={handleToggleCart}/> </Link> 
  </div>

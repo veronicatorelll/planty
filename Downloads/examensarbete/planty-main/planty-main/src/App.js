@@ -16,6 +16,7 @@ import Home from './Pages/Home';
 import Checkout from './Pages/Checkout';
 import Payment from './Pages/Payment';
 import OrderConf from './Pages/OrderConf';
+import Tips from './Pages/Tips';
 
 
 function App() {
@@ -55,6 +56,8 @@ useEffect( () => {
   <Route path="/Cart" element={<Cart />} />  
   <Route path="/Payment" element={<Payment />} />  
   <Route path="/OrderConf" element={<OrderConf />} />  
+  <Route path="/Tips" element={<Tips />} />  
+
 
 
   {/* <Route path="/Payment" element={<Payment />} />   */}

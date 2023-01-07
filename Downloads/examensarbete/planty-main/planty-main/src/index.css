@@ -104,23 +104,42 @@ color: rgb(20, 22, 20);
 a:hover{
   color: rgb(11, 11, 11);
 }
-.title-about{
- display: flex;
- justify-content: center;
- margin-top: 90px;
+
+/* -------- About --------- */
+.about-title{
+  font-family: garamond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-size: 50px;
 }
 
-.about{
-  width: 800px;
+.about-container{
   line-height: 30px;
   margin-left: 18%;
   margin-bottom: -100px;
-    animation: fadeIn 5s;
-    -webkit-animation: fadeIn 5s;
-    -moz-animation: fadeIn 5s;
-    -o-animation: fadeIn 5s;
-    -ms-animation: fadeIn 5s;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+ -ms-animation: fadeIn 5s;
   }
+
+.about-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 830px;
+}
+
+.about-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
   
   @keyframes fadeIn {
     0% { opacity: 0; }
@@ -148,7 +167,7 @@ a:hover{
   }
 
 
-
+/* ------  Contact ------- */
 .contact {
   width: 800px;
   margin-bottom: 100px;
@@ -200,6 +219,8 @@ font-size: 14px;
   margin-left: 70px;
 }
 
+
+/* -------- Order Confirmation --------- */
 .orderconf {
   display: flex;
   justify-content: center;
@@ -208,12 +229,15 @@ font-size: 14px;
   margin-top: 40px;
 }
 
+/* ------ Logo for Header ------ */
+
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* --------- Cart --------- */
 .cart {
 display: flex;
 flex-direction: column;
@@ -227,11 +251,12 @@ padding: 5px;
   margin: 0;
 }
 
-
 .quantity {
   margin-left: -170px;
   font-size: 12px;
 }
+
+/* -------- Home ------- */
 .home-title {
   font-family: garamond;
   display: flex;
@@ -312,6 +337,7 @@ padding: 5px;
   margin-left: -10px;
 }
 
+/* Quantity Number */
 .quantity {
   display: flex;
   justify-content: center;
@@ -346,7 +372,6 @@ padding: 5px;
 .add-cart-container{
   margin-left: 55%;
   margin-top: -580px;
-
 }
 
 .add-to-cart{
@@ -365,3 +390,31 @@ padding: 5px;
 .input-quantity{
 
 }
+
+/*   --------- Tips ----------- */
+.tips-img{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: -90px;
+}
+
+.tipstricks{
+margin-top: 100px;
+font-family: garamond;
+display: flex;
+justify-content: center;
+font-size: 45px;
+}
+
+.tips-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 550px;
+  margin-left: 36%;
+}
+
+
+
+
