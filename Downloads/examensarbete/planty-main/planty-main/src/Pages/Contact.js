@@ -1,28 +1,25 @@
 import React from 'react';
+import contact from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Contact.png"
+
 
 function Contact() {
   return (
     <div>
 
       
-    <div className='contact'>
-        <h3 className='title-contact'>Contact</h3>
-Your contact information is used to contact you, and can include information such as your name, phone number and email. 
+    <div>
+        <p className='title-contact'>We are here for you!</p>
+<p className='contact-content'>Your contact information is used to contact you, and can include information such as your name, phone number and email. 
 It could also include your professional profile, if you have one and if necessary or relevant for the jobs you're applying for.
 
 During the hiring process, employers use the contact info listed on your resume to provide 
 updates about your job application, including getting in touch to schedule initial interviews and filling out paperwork regarding your pending employment.
-        
+    </p>    
         </div>
 
-        <div className='customer-service'>
-        <h4>Get in touch with us!</h4>
-        <p>Mail: hello@planty.se </p>
-        <p>Phone: +46 673 192 733 </p>
-        <p>Address: Plantans Väg 1, 168 44, Stockholm </p>
-        </div>
-
-
+        <div className='contact-img'>
+<img height={500} width ={800} src={contact} alt="" />
+</div>
    </div>
       
   )

@@ -17,7 +17,7 @@ import Checkout from './Pages/Checkout';
 import Payment from './Pages/Payment';
 import OrderConf from './Pages/OrderConf';
 import Tips from './Pages/Tips';
-
+import News from './Components/News';
 
 function App() {
 

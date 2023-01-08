@@ -3,7 +3,7 @@ import hero from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main
 import offer4 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer4.png"
 import offer2 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer2.png"
 import offer3 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer3.png"
-
+import News from '../Components/News'
 
 
 function Home() {
@@ -35,7 +35,7 @@ function Home() {
             <p> Care advice and tips </p>
             </div>
 
-
+<News/>
             
     </div>
   )

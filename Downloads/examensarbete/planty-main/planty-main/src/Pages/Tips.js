@@ -1,5 +1,6 @@
 import React from 'react';
 import tips from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Tips.png";
+import News from '../Components/News';
 
 function Tips() {
   return (
@@ -16,6 +17,7 @@ function Tips() {
 <img height={500} width ={600} src={tips} alt="Logo" />
 </div>
 
+<News />
     </div>
   )
 }

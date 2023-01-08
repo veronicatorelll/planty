@@ -1,6 +1,6 @@
 import React from 'react';
 import about from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Whatweoffer.png";
-
+import News from '../Components/News';
 
 
 
@@ -26,7 +26,7 @@ Let’s take a look at 16 of our favorite About Us pages, whose design and conte
 <img height={600} width ={800} src={about} alt="" />
 </div>
 
-
+<News />
     </div>
   )
 }
