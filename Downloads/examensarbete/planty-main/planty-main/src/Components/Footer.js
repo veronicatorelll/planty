@@ -13,7 +13,7 @@ function Footer() {
 
 
 {/* Information */}
-<div className='footer-container'>
+<div className='info-container'>
   <p className='information-title'>INFORMATION</p>
   <p> purchase conditions </p>
   <p>returns & complaints</p>
@@ -21,9 +21,10 @@ function Footer() {
   <p>delivery information</p>
   <p>privacy policy</p>
   <p>cookies</p>
-
+</div>
 
 {/* Help */}
+<div className='help-container'>
 <p className='help-title'>HELP</p>
 <p> contact us </p>
 <p> track your order </p>
@@ -33,6 +34,7 @@ function Footer() {
 
 {/* Social Media Icons */}
 <div className='socials'>
+<p> Follow us on</p>
     <img height={45} width ={45} src={icon1} alt="" />
     <img height={45} width ={45} src={icon2} alt="" />
     <img height={45} width ={45} src={icon3} alt="" />
@@ -40,13 +42,15 @@ function Footer() {
 
 {/* Klarna Payment Icon */}
   <div className='klarna-icon'>
+  <p> Smooth payments with</p>
 <img height={65} width ={70} src={klarna} alt="" />
 </div>
 
 {/* Copyright */}
-<p className='copyright'>
+ <p className='copyright'>
 Copyright © Veronica Torell 2023 ◦ All rights reserved
-</p>
+</p> 
+
 
     </div>
   )

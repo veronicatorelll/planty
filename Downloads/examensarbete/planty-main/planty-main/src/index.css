@@ -101,45 +101,66 @@ text-decoration: none;
 
 .footer {
   margin-top: 200px;
-  height: 350px;
+  height: 300px;
   background-color: rgb(200, 203, 177);
 }
 
-.footer-container{
+.info-container{
+  line-height: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
- width: 200px;
- margin-left: 708px;
- margin-top: -20px;
+  flex-direction: column;
+  text-align: center;
+  width: 200px;
+  margin-left: 75%;
 }
 
 .information-title{
   font-weight: bold;
 }
 
-.information-container p {
-  font-size: 14px;
-}
-
-.help-container{
- width: 200px;
- margin-left: 470px;
- margin-top: -200px;
- font-size: 14px;
-}
-
 .help-title{
   font-weight: bold;
 }
 
-.copyright{
-  width: 310px;
-  font-size: 13px;
-  margin-left: 1%;
-  margin-top: 40px;
+.help-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -360px;
+  width: 200px;
+  margin-left: 50%;
+  margin-top: -294px;
 }
 
+.socials {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  margin-top: -200px;
+  margin-bottom: 20px;
+  margin-left: 2%;
+  width: 400px;
+  font-size: 14px;
+}
+
+.klarna-icon {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 400px;
+  margin-left: 2%;
+  font-size: 14px;
+}
+
+.klarna-icon img {
+  margin-top: -10px;
+}
+.copyright{
+  margin-left: 2%;
+  margin-top: 90px;
+  font-size: 13px;
+
+}
 /* -------- About --------- */
 .about-title{
   font-family: garamond;
