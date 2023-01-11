@@ -23,15 +23,41 @@ function Products({setCartProducts, cartProducts}) {
   }, [])
 
   return (
+
             products.map((product) => (
+
+
+
+
               <div key={product.id} >
-                <Link to={`/product/${product.id}`}>
-                <h2>{product.title}</h2>
+            
+               <div className="products-container">
+               <img height={500} width={400}src={product.img_url} alt="" />
+
+                <Link className="link-products" to={`/product/${product.id}`}>
+                <div className="product-titles">{product.title} </div> 
                 </Link>
-                <div>{product.description}</div>
-                <div>{product.price} :- </div>
-                <img height={300} src={product.img_url} alt="" />
+
+
+               <div className="product-prices">{product.price} :- </div>
+
+
+                </div>
+
                 
+
+
+
+
+
+
+
+
+
+
+
+
+
               </div>
             ))
 

@@ -223,21 +223,6 @@ text-decoration: none;
 
 
 /* ------  Contact ------- */
-.contact {
-  width: 800px;
-  margin-bottom: 100px;
-  line-height: 30px;
-  margin-left: 18%;
-  margin-bottom: -100px;
-  color:  rgb(58, 94, 83);
-  font-size: 18px;
-  animation: fadeIn 5s;
-    -webkit-animation: fadeIn 5s;
-    -moz-animation: fadeIn 5s;
-    -o-animation: fadeIn 5s;
-    -ms-animation: fadeIn 5s;
-}
-
 .title-contact{
   font-family: garamond;
   display: flex;
@@ -249,16 +234,17 @@ text-decoration: none;
 }
 
 .contact-content {
+  width: 60%;
+  margin-left: 200px;
   margin-bottom: -100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 700px;
 }
 
 .contact-img {
   margin-top: 135px;
   margin-bottom: -140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .customer-service{
@@ -351,6 +337,11 @@ padding: 5px;
  align-items: center;
 }
 
+.contact-button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .contact-button {
   font-size: 13px;
   border: none;
@@ -359,10 +350,7 @@ padding: 5px;
   color: white;
   padding: 6px;
   width: 90px;
-}
-
-.contact-button a:hover {
-transform: scale(1.5);
+  cursor: pointer;
 }
 
 .hero {
@@ -420,7 +408,19 @@ transform: scale(1.5);
   width: 22px;
 }
 
-/* --------------Single Product Page --------------*/
+/* --- All Products --- */
+
+.products-container {
+  display: flex;
+  flex-direction: row;
+}
+
+a.link-products{
+  width: 400px;
+}
+
+
+/* ------ Single Product Page ------*/
 .product-img {
   margin-left: 10%;
   margin-top: -310px;

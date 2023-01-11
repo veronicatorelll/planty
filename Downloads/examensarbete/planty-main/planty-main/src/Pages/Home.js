@@ -11,11 +11,11 @@ function Home() {
     <div>
         <p className='home-title'>Green for sustainability.</p>
         <p className='home-p'>Nobody wants a world without plants. It can only get better with more of them. </p>
-
-           <div className='contact-btn-container'> 
+        <a href='/contact'>
+        <div className='contact-btn-container'> 
            <button className='contact-button'>Contact us</button>
            </div> 
-
+          </a>
             
            <div className='hero'>
          <img className='hero-home' src={hero} alt="hero" />
