@@ -1,13 +1,24 @@
 import { Link } from 'react-router-dom'
-import { useState } from 'react';
-import Header from './Header'
+import { useState, useEffect } from 'react';
 import Checkout from '../Pages/Checkout';
+import { CartButton } from '../Styles/cartStyle';
 
 function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
 
-  const [cart, setCart] = useState([])
 
-  var total = 0
+  
+  const cartItems = localStorage.getItem('cartProducts')
+  ? JSON.parse(localStorage.getItem('cartProducts'))
+  : [];
+
+const initialState = {
+  cartReducer: {
+    cartProducts: cartProducts,
+  },
+};
+
+
+  let total = 0
 
 
 
@@ -32,7 +43,6 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
     e.preventDefault();
     setToggleCart(!toggleCart)
     console.log("checkout")
-
   }
 
   return (
@@ -48,46 +58,56 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                          <div key={product.id}>                    
                           <h3>{product.title}</h3>                       
                           <p>{product.price} :- </p>                       
-                          <p className='quantity'>{product.quantity}</p>                     
+                          <p>{product.quantity}</p>                     
                           <div>                      
                           <img height={90} src={product.img_url} alt="" />
                     </div>                                           
-                      <button className='remove-cart' onClick={() => removeFromCart(product.id)}>Remove From Cart</button> 
+                      <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
+                        Remove From Cart
+                        </button> 
 
                  </div>
               ) } 
+              else {return null}
         })
       }
 
      
         {
           total < 1
-          ? "0 items in cart"
-          : `Total: ${total} :-` 
+          ? "CART: 0 items in cart"
+          : `CART Total: ${total} ` 
         }
 
 
-
-
+{
+        <Link to="/Checkout"
+              onClick={() => {window.location.href="/Checkout"}}>
+              Checkoutis 1
+         </Link>}
           
 
-        <br></br>
-                  <Link  to ="/Checkout">Checkout</Link>
+
+              
+        <Link to="/"
+             onClick={()  => handleToggleCart}>              
+             Go to checkout 2
+        </Link>
 
 
 
-      {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/> */}
 
 
-     {/*  <Link className='link-checkout' to="/Checkout">
-          <button onClick={handleToggleCart}>
-            Go to Checkout
-          </button>
-        </Link> */}
-        
-        
-        
-      
+{/* 
+
+
+        <Checkout 
+        cartProducts={cartProducts} 
+        setCartProducts={setCartProducts} 
+        toggleCart={toggleCart} 
+        setToggleCart={setToggleCart}
+        /> */}
+
 
       </div>
   )

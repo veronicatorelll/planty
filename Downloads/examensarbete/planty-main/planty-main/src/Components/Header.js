@@ -15,9 +15,14 @@ import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main
 function Header({cartProducts, setCartProducts}) {
   const [toggleCart, setToggleCart] = useState(false)
 
-  var total = 0;
+  let total = 0;
 
 
+ // ---------- Toggle Cart ---------------------
+ const handleToggleCart = () => {
+  setToggleCart(!toggleCart)
+  console.log("checkout")
+}
 
   // ---------- Delete from Cart ---------------------
    const removeFromCart = id => {
@@ -27,26 +32,24 @@ function Header({cartProducts, setCartProducts}) {
   ))
   } 
 
-  // ---------- Toggle Cart ---------------------
-  const handleToggleCart = () => {
-    setToggleCart(!toggleCart)
-  }
+ 
 
   return (
 <div>
   <div className='logo'>
 <img height={200} width ={400} src={logo} alt="Logo" />
 </div>
+ 
 
 <div className='navigation'>
  <BrowserRouter>
- <Link to ="/">Home</Link>
- <Link to ="/About">About us</Link>
- <Link to ="/Products">Our products</Link> 
- <Link to ="/Tips">Tips</Link> 
- <div className='cart-icon'>
- <Link to ="/Cart">  <FaShoppingCart  onClick={handleToggleCart}/> </Link> 
- </div>
+ <Link to ="/"onClick={() => {window.location.href="/"}}>Home</Link>
+ <Link to ="/About"onClick={() => {window.location.href="/About"}}>About us</Link>
+ <Link to ="/Products"onClick={() => {window.location.href="/Products"}}>Our products</Link> 
+ <Link to ="/Tips" onClick={() => {window.location.href="/Tips"}}>Tips</Link> 
+ <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
+        {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/> */}
+
  {/* <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/> */}
    
  </BrowserRouter>
@@ -63,13 +66,21 @@ function Header({cartProducts, setCartProducts}) {
         total += product.price * product.quantity
 
                          return ( 
-                         <div key={product.id}>                    
-                        <p className='quantity'>{product.quantity}</p>                     
+                         <div key={product.id}>           
+                    
                  </div>
               ) } 
         })
       }
+
+
+
+        <br></br>
+
+
+
     </div>
+
     </div>
   )
 }

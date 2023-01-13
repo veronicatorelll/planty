@@ -33,8 +33,8 @@ function Product ({setCartProducts, cartProducts}) {
                 ? {...product, cart: true, quantity: quantity}
                 : product
                 ))
-                console.log("Add to cart")
                 setQuantity("")
+                console.log("Product.js: Added")
 
             } else {
                 setCartProducts(product)
