@@ -7,7 +7,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
 
 
   
-  const cartItems = localStorage.getItem('cartProducts')
+ /*  const cartItems = localStorage.getItem('cartProducts')
   ? JSON.parse(localStorage.getItem('cartProducts'))
   : [];
 
@@ -15,7 +15,7 @@ const initialState = {
   cartReducer: {
     cartProducts: cartProducts,
   },
-};
+}; */
 
 
   let total = 0
@@ -46,7 +46,11 @@ const initialState = {
   }
 
   return (
-    <div className="cart-container">
+    <div>
+      <div className='cart-container'>
+
+      <p className='cart-title'>Cart</p>
+      <hr></hr>
 
       {             
       cartProducts?.map(product => {
@@ -55,44 +59,53 @@ const initialState = {
         total += product.price * product.quantity
 
                          return ( 
-                         <div key={product.id}>                    
-                          <h3>{product.title}</h3>                       
-                          <p>{product.price} :- </p>                       
-                          <p>{product.quantity}</p>                     
-                          <div>                      
-                          <img height={90} src={product.img_url} alt="" />
-                    </div>                                           
-                      <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
+                         <div key={product.id}>       
+                          <div className='cart-img'>                      
+                          <img height={200} src={product.img_url} alt="" />
+                          </div>                   
+                          <p className='cart-prodname'>{product.title}</p>                       
+                          <p className='cart-amount'>Amount: {product.quantity}</p>      
+                    {/*   <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
                         Remove From Cart
-                        </button> 
+                        </button>  */}
 
                  </div>
               ) } 
               else {return null}
         })
       }
+      </div>
 
-     
+     <div className='cart-total'>
         {
           total < 1
-          ? "CART: 0 items in cart"
-          : `CART Total: ${total} ` 
+          ? "Ops! No items."
+          : `Total ${total} kr` 
         }
 
+<div className='free'> 
+<p>Free shipping on orders above 300 kr. </p>
+<p>Free home delivery on orders above 500 kr.</p>
 
-{
-        <Link to="/Checkout"
+<div className='checkout-links'>
+        <Link className='checkout-one' to="/Checkout"
               onClick={() => {window.location.href="/Checkout"}}>
-              Checkoutis 1
-         </Link>}
+              Checkout 
+         </Link>
           
 
 
-              
-        <Link to="/"
-             onClick={()  => handleToggleCart}>              
-             Go to checkout 2
-        </Link>
+       {/*        
+        <Link className='checkout-two' to="/Checkout"
+             onClick={(e)  => handleToggleCart}>              
+             Checkout two
+        </Link> */}
+        </div>-
+        </div>
+
+
+
+        </div>
 
 
 
