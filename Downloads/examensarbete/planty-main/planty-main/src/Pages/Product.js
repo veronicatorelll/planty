@@ -6,7 +6,7 @@ import { useParams, Link } from "react-router-dom";
 function Product ({setCartProducts, cartProducts}) {
     const [product, setProduct] = useState([]);
     const params = useParams();
-    const [quantity, setQuantity] = useState("")
+    const [quantity, setQuantity] = useState(0)
   
 // ------ API ------
 
@@ -29,15 +29,15 @@ function Product ({setCartProducts, cartProducts}) {
     const addToCart = (e, id) => {
         e.preventDefault();
         if (cartProducts.length > 0) {
-            setCartProducts(cartProducts?.map((product)=> product.id == id
+            setCartProducts(cartProducts?.map((product)=> product.id ==  id && quantity > 0
                 ? {...product, cart: true, quantity: quantity}
                 : product
                 ))
-                setQuantity("")
-                console.log("Product.js: Added")
-
-            } else {
+                setQuantity(0)
+             } else {
                 setCartProducts(product)
+                // localStorage.setItem('cartProducts', JSON.stringify(product))
+
             }
         }      
         
@@ -46,9 +46,16 @@ function Product ({setCartProducts, cartProducts}) {
  
     const handleQuantityInput = (e) => {
      setQuantity(e.target.value)
-     
    }  
-       
+
+   
+  // Increase Quantity
+  const addItems = () => setQuantity(quantity => quantity + 1);
+
+  // Decrease Quantity
+  const decreaseItems = () => {
+    if(quantity > 0) setQuantity(quantity => quantity - 1);
+  };
 
   return (       
    
@@ -65,9 +72,19 @@ function Product ({setCartProducts, cartProducts}) {
             <img height={550} src={product.img_url} alt="" />
             </div>
 
+
+
+
+
+
+
+
             <form className='add-cart-container' onSubmit={(e) => addToCart(e, product.id)}>
             <label>
-            <input className='input-quantity' placeholder= 'amount . . .' type="number" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <span className="minus" onClick={decreaseItems}>-</span>
+            <input className='input-quantity' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <span className="plus" onClick={addItems}>+</span>
+
             </label>
             
             <button className='add-to-cart'> Add to cart </button>

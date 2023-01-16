@@ -362,13 +362,23 @@ text-decoration: none;
 }
 
 /* --- All Products --- */
-.products-container {
-  display: flex;
-  flex-direction: row;
-}
-
 a.link-products{
   width: 400px;
+}
+
+.img-products  {
+display: flex; 
+gap: 5px;
+
+}
+
+ img {
+  display: inline;
+justify-content: center;  
+}
+
+.product-titles, .product-prices{
+max-width: 50px;
 }
 
 
@@ -410,9 +420,6 @@ a.link-products{
   border-radius: 2px;
 }
 
-.input-quantity{
-
-}
 
 /*   --- Tips --- */
 .tips-img{
@@ -472,8 +479,9 @@ font-size: 45px;
   max-height: 600px;
   overflow: auto;
   margin-right: 2vw;
-  width: 300px;
+  width: 250px;
   margin-top: 430px;
+  background-color: lightblue;
 }
 
 .cart-icon {
@@ -533,11 +541,13 @@ font-size: 45px;
   align-items: center;
   height: 20px;
   margin-top: 50px;
+  padding-bottom: 15px;
 }
 /* --- Checkout --- */
 .checkout {
   border: solid 1px rgba(128, 128, 128, 0.194);
-  width: 700px;
+  width: 900px;
+  margin-left: 700px;
 }
 
 .checkout-title{
@@ -553,21 +563,40 @@ font-size: 45px;
   font-size: 30px;
 }
 
-.cart-picture{
-  display: flex;
+.checkout-img{
+ display: inline;
+margin-left: 5px;
+width: 200px;
 }
 
 .checkout-prodinfo{
-  font-family: garamond;
 }
 
 .total {
   font-family: garamond;
   font-size: 25px;
+  margin-left: 10px;
+}
+
+.continue {
+  text-decoration: underline;
 }
 
 .quantity-label{
  border:none;
+}
+
+.checkout-quantity{
+  display: block;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgb(93, 135, 93);
+  color: white;
+  padding: 9px;
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
 .quantity-button{
@@ -581,13 +610,43 @@ border: none;
 
 .checkout-remove{
   border: none;
+  background-color: white;
+  margin-left: 20px;
 }
 
-hr {
+.checkout-hr {
   border: none;
   height: 1px;
-  width: 400px;
-  display: flex;
-  justify-content: flex-start;
+  width: 900px;
+  /* display: flex;
+  justify-content: flex-start; */
   background-color: rgba(80, 80, 80, 0.219); 
 }
+
+
+/* ---  Quantity buttons --- */
+span {cursor:pointer; }
+		.number{
+			margin:100px;
+		}
+		.minus, .plus{
+			width:20px;
+			height:15px;
+			background:#f2f2f2;
+			border-radius:4px;
+			padding:5px 5px 8px 5px;
+			border:1px solid #ddd;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+		}
+		input{
+			height:28px;
+      width: 100px;
+      text-align: center;
+      font-size: 26px;
+			border:1px solid #ddd;
+			border-radius:4px;
+      display: inline-block;
+      vertical-align: middle;
+    }

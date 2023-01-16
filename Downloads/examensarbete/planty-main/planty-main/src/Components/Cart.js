@@ -3,21 +3,9 @@ import { useState, useEffect } from 'react';
 import Checkout from '../Pages/Checkout';
 import { CartButton } from '../Styles/cartStyle';
 
+
+
 function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
-
-
-  
- /*  const cartItems = localStorage.getItem('cartProducts')
-  ? JSON.parse(localStorage.getItem('cartProducts'))
-  : [];
-
-const initialState = {
-  cartReducer: {
-    cartProducts: cartProducts,
-  },
-}; */
-
-
   let total = 0
 
 
@@ -39,10 +27,8 @@ const initialState = {
    }
 
    // ---------- Toggle Cart ---------------------
-  const handleToggleCart = (e) => {
-    e.preventDefault();
+  const handleToggleCart = () => {
     setToggleCart(!toggleCart)
-    console.log("checkout")
   }
 
   return (
@@ -50,6 +36,8 @@ const initialState = {
       <div className='cart-container'>
 
       <p className='cart-title'>Cart</p>
+
+
       <hr></hr>
 
       {             
@@ -65,13 +53,13 @@ const initialState = {
                           </div>                   
                           <p className='cart-prodname'>{product.title}</p>                       
                           <p className='cart-amount'>Amount: {product.quantity}</p>      
-                    {/*   <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
+                     <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
                         Remove From Cart
-                        </button>  */}
+                        </button>  
 
                  </div>
               ) } 
-              else {return null}
+              else { return null }
         })
       }
       </div>
@@ -87,20 +75,11 @@ const initialState = {
 <p>Free shipping on orders above 300 kr. </p>
 <p>Free home delivery on orders above 500 kr.</p>
 
-<div className='checkout-links'>
-        <Link className='checkout-one' to="/Checkout"
-              onClick={() => {window.location.href="/Checkout"}}>
-              Checkout 
-         </Link>
-          
+   <Link className='link-checkout' to="/Checkout">
+     Go to Checkout
+   </Link>
+        
 
-
-       {/*        
-        <Link className='checkout-two' to="/Checkout"
-             onClick={(e)  => handleToggleCart}>              
-             Checkout two
-        </Link> */}
-        </div>-
         </div>
 
 

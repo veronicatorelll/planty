@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Link, BrowserRouter, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
 import axios from 'axios';
 import './index.css';
 import Contact from "./Pages/Contact"
@@ -20,16 +20,22 @@ function App() {
 
   // ----- Cart State ------
 
-  const [cartProducts, setCartProducts] = useState([]);
+      const [product, setProduct] = useState([]);
+      const [quantity, setQuantity] = useState("")
+      const [cartProducts, setCartProducts] = useState([]);
+
+      
+
+
 
   const fetchData = async () => {
     try {
         const response = await fetch('http://localhost/planty-backend/Products.php');
         const data = await response.json();
-        // console.log(data)
         
         setCartProducts(data);
-    } catch(error) {
+    } 
+     catch(error) {
     }
 }
 
@@ -39,32 +45,35 @@ useEffect( () => {
 
 
 
+
+
    return (
     <div className="App">
-   <Header cartProducts={cartProducts} setCartProducts={setCartProducts}/>
 
-  
+<Header cartProducts={cartProducts} setCartProducts={setCartProducts}/>
 
-  <BrowserRouter>
-  <Routes>
+<BrowserRouter>
+<Routes>
 
-  <Route path="/" element={<Home />} /> 
-  <Route path="/Contact" element={<Contact />} /> 
-  <Route path="/About" element={<About />} /> 
-  <Route path="/Cart" element={<Cart />} />  
-  <Route path="/Payment" element={<Payment />} />  
-  <Route path="/OrderConf" element={<OrderConf />} />  
-  <Route path="/Tips" element={<Tips />} />  
+<Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts}/>} />
+<Route path="/product/:prodId" element={<Product cartProducts={cartProducts} setCartProducts={setCartProducts} />} />
+<Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
+        
+<Route path="/" element={<Home />} /> 
+<Route path="/Contact" element={<Contact />} /> 
+<Route path="/About" element={<About />} /> 
+<Route path="/Cart" element={<Cart />} />  
+<Route path="/Payment" element={<Payment />} />  
+<Route path="/OrderConf" element={<OrderConf />} />  
+<Route path="/Tips" element={<Tips />} />  
 
-  <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
-  <Route path="/Product/:prodId" element ={<Product cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
-  <Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
-  <Route path="/Checkout" exact component={<Checkout/>} />
-
-
-
-  </Routes>
-  </BrowserRouter>
+{/* <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
+<Route path="/Product/:prodId" element ={<Product cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
+<Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
+<Route path="/Checkout" exact component={<Checkout/>} /> 
+ */}
+</Routes>
+</BrowserRouter>
 
    <Footer/>
    

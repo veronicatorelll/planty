@@ -1,9 +1,15 @@
 import {useState} from 'react'
+import { Link } from 'react-router-dom'
+import {FaShoppingCart} from "react-icons/fa"
+
+
+
 
 function Checkout ({cartProducts, setCartProducts}) {
+  
   let total = 0
   const [product, setProduct] = useState([]);
-  const [quantity, setQuantity] = useState("")
+  const [quantity, setQuantity] = useState(0)
 
 
 
@@ -24,7 +30,7 @@ const addToCart = (e, id) => {
           ? {...product, cart: true, quantity: quantity}
           : product
           ))
-          setQuantity("")
+          setQuantity(0)
 
       } else {
           setCartProducts(product)
@@ -38,16 +44,29 @@ const addToCart = (e, id) => {
     
   } 
 
+   
+  // Increase Quantity
+  const addItems = () => setQuantity(quantity => quantity + 1);
+
+  // Decrease Quantity
+  const decreaseItems = () => {
+    if(quantity > 0) setQuantity(quantity => quantity - 1);
+  };
 
 
   
     return (
       <div className="checkout">
 
+
         <p className='checkout-title'>Checkout</p>
+        <p className='order-summary'>Order Summary</p>
+                    <Link className='continue' to="/Products">
+                          Continue shopping
+                         </Link>
           {
-              cartProducts.map(product => {
-    
+              cartProducts?.map(product =>
+                 {
                 if(product.cart === true) {
                   total += product.price  * product.quantity
                    return (
@@ -55,29 +74,34 @@ const addToCart = (e, id) => {
 
 
 
-                    <p className='order-summary'>Order Summary</p>
-                       <hr></hr>
-                     <div className="cartpicture">
-                      <img height={200}src={product.img_url} alt="" />
+                   
+                       <hr className='checkout-hr'></hr>
+
+                       
+                     <div className="checkout-img">
+                      <img height={300} width={250} src={product.img_url} alt="" />
                     </div>
+                    <button className='checkout-remove' onClick={() => removeFromCart(product.id )}>x</button>
 
                     <div className='checkout-prodinfo'>
-                    <p className='checkout-prodtitle'>{product.title}</p>    
+                    <p className='checkout-prodtitle'>{product.title}</p>   
+                    <p>Price: {product.price} :-</p>  
                     <p>Amount: {product.quantity}</p>  
                     <p>{product.quantity.total}</p> 
                     </div>
 
-                    <button className='checkout-remove' onClick={() => removeFromCart(product.id )}>x</button>
-                    <form onSubmit={(e) => addToCart(e, product.id)}>
+                         
+      <form onSubmit={(e) => addToCart(e, product.id)}>
+            <label>
+            <span className="minus" onClick={decreaseItems}>-</span>
+            <input className='input-quantity' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <span className="plus" onClick={addItems}>+</span>
 
+            </label>
+            
+            <button className='checkout-quantity'> Update </button>
+            </form>
 
-                      {/* Update Quantity */}
-                      <label className='quantity-label'>
-                        <input className='quantity-label' type="number" min="1" placeholder='wanted amount...' name="quantity" 
-                        onChange={handleQuantityInput} value={quantity.id}/>
-                         </label>
-                         <button className='quantity-button'>Update quantity</button>
-                         </form>
                          
                 </div>
                  
@@ -87,7 +111,7 @@ const addToCart = (e, id) => {
               
         })
       }
- <hr></hr>
+ <hr className='checkout-hr'></hr>
                
                
                 {/* Total */}
@@ -95,12 +119,14 @@ const addToCart = (e, id) => {
         <div className='total'>
         {
           total <1
-          ?  "You have 0 products."
+          ?  "Sorry, no products here."
           : `Total: ${total} kr` 
         }
+        
        </div>
-
+    
     </div>
+    
   )
 }
 
