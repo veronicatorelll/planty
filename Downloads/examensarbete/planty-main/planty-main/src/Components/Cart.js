@@ -35,10 +35,12 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
     <div>
       <div className='cart-container'>
 
-      <p className='cart-title'>Cart</p>
+<div className='one'>
+      <p className='cart-title'>Shopping cart</p>
 
 
-      <hr></hr>
+      <hr className='cart-hr'></hr>
+      </div>
 
       {             
       cartProducts?.map(product => {
@@ -51,20 +53,11 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <div className='cart-img'>                      
                           <img height={200} src={product.img_url} alt="" />
                           </div>                   
+                          <button className='remove-cart' onClick={() => removeFromCart(product.id)}> x </button>  
                           <p className='cart-prodname'>{product.title}</p>                       
                           <p className='cart-amount'>Amount: {product.quantity}</p>      
-                     <button className='remove-cart' onClick={() => removeFromCart(product.id)}>
-                        Remove From Cart
-                        </button>  
-
-                 </div>
-              ) } 
-              else { return null }
-        })
-      }
-      </div>
-
-     <div className='cart-total'>
+<hr className='lower-cart-hr'></hr>
+<div className='cart-total'>
         {
           total < 1
           ? "Ops! No items."
@@ -74,17 +67,24 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
 <div className='free'> 
 <p>Free shipping on orders above 300 kr. </p>
 <p>Free home delivery on orders above 500 kr.</p>
+ </div>
 
-   <Link className='link-checkout' to="/Checkout">
+        <Link className='link-checkout' to="/Checkout">
      Go to Checkout
    </Link>
-        
-
-        </div>
 
 
 
         </div>
+                 </div>
+              ) } 
+              else { return null }
+        })
+      }
+      
+      </div>
+
+    
 
 
 
