@@ -32,32 +32,27 @@ function Header({cartProducts, setCartProducts}) {
 
   return (
 <div>
+
+  <div className='header-message'>FREE SHIPPING ON PURCHASES OVER 200kr
+</div>
   <div className='logo'>
 <img height={200} width ={400} src={logo} alt="Logo" />
 </div>
  
 
 <div className='navigation'>
- <BrowserRouter forceRefresh={true}>
+ 
  <Link to ="/">Home</Link>
  <Link to ="/About">About us</Link>
  <Link to ="/Products"onClick={() => {window.location.href="/Products"}}>Our products</Link> 
  <Link to ="/Tips" onClick={() => {window.location.href="/Tips"}}>Tips</Link> 
 
-
- <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}  onClick={handleToggleCart}/>
+ <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}  onClick={handleToggleCart} />
  {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>  */}
 
-  {/* <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/>  */}
    
- </BrowserRouter>
 
-
-
-
- 
-
- {             
+{/*  {             
       cartProducts?.map(product => {
       if(product.cart === true) 
       { 
@@ -69,16 +64,9 @@ function Header({cartProducts, setCartProducts}) {
                  </div>
               ) } 
         })
-      }
-
-
-
-        <br></br>
-
-
-
+      } */}
+     <br></br>
     </div>
-
     </div>
   )
 }

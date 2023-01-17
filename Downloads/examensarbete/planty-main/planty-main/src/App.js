@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {BrowserRouter, Route, Routes, Link} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import axios from 'axios';
 import './index.css';
 import Contact from "./Pages/Contact"
@@ -50,15 +50,14 @@ useEffect( () => {
    return (
     <div className="App">
 
-<Header cartProducts={cartProducts} setCartProducts={setCartProducts}/>
 
 <BrowserRouter>
-<Routes>
+<Header cartProducts={cartProducts} setCartProducts={setCartProducts}/>
 
+<Routes>
 <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts}/>} />
 <Route path="/product/:prodId" element={<Product cartProducts={cartProducts} setCartProducts={setCartProducts} />} />
 <Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
-        
 <Route path="/" element={<Home />} /> 
 <Route path="/Contact" element={<Contact />} /> 
 <Route path="/About" element={<About />} /> 
@@ -66,19 +65,16 @@ useEffect( () => {
 <Route path="/Payment" element={<Payment />} />  
 <Route path="/OrderConf" element={<OrderConf />} />  
 <Route path="/Tips" element={<Tips />} />  
-
-{/* <Route path="/Products" element={<Products cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
-<Route path="/Product/:prodId" element ={<Product cartProducts={cartProducts} setCartProducts={setCartProducts}/>} /> 
-<Route path="/Checkout" element={<Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} />} /> 
-<Route path="/Checkout" exact component={<Checkout/>} /> 
- */}
+<Route path="/Header" element={<Header/>} />  
 </Routes>
+
+<Footer/>
+
 </BrowserRouter>
 
-   <Footer/>
    
-</div>
-  );
+ </div>
+ );
 }
 
 export default App;

@@ -37,7 +37,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
 
 <div className='one'>
       <p className='cart-title'>Shopping cart</p>
-
+   
 
       <hr className='cart-hr'></hr>
       </div>
@@ -62,18 +62,27 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
           total < 1
           ? "Ops! No items."
           : `Total ${total} kr` 
+          
         }
+        <Link to="/Tips">
+To Tips
+</Link>
 
 <div className='free'> 
 <p>Free shipping on orders above 300 kr. </p>
-<p>Free home delivery on orders above 500 kr.</p>
+<p>Free home delivery on orders above 500 kr.</p> 
  </div>
 
-        <Link className='link-checkout' to="/Checkout">
-     Go to Checkout
+        <Link className='link-checkout' to="/Checkout" >
+   <button   onClick={() => { 
+  console.log("Going to Checkout");
+  handleToggleCart(cartProducts);        
+}} > Go to Checkout </button>
    </Link>
 
+  
 
+ 
 
         </div>
                  </div>
@@ -81,6 +90,8 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
               else { return null }
         })
       }
+      
+     
       
       </div>
 

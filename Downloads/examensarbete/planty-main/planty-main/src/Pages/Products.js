@@ -28,23 +28,22 @@ function Products({setCartProducts, cartProducts}) {
     
 
             products.map((product) => (
+              <div className="products-container">
 
                <div key={product.id} >
 
-            
               <div className="img-products">
                 <img height={500} width={400}src={product.img_url} alt="" />
                 </div> 
 
-                <Link className="link-products" to={`/product/${product.id}`}>
+                 <Link className="link-products" to={`/product/${product.id}`}>
                 <div className="product-titles">{product.title} </div> 
                 </Link>
-               <div className="product-prices">{product.price} :- </div>
+               <div className="product-prices">{product.price} :- </div> 
+               </div>
 
               </div>
             ))
-
-
   )
 }
 
