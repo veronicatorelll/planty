@@ -56,34 +56,10 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <button className='remove-cart' onClick={() => removeFromCart(product.id)}> x </button>  
                           <p className='cart-prodname'>{product.title}</p>                       
                           <p className='cart-amount'>Amount: {product.quantity}</p>      
-<hr className='lower-cart-hr'></hr>
-<div className='cart-total'>
-        {
-          total < 1
-          ? "Ops! No items."
-          : `Total ${total} kr` 
-          
-        }
-        <Link to="/Tips">
-To Tips
-</Link>
-
-<div className='free'> 
-<p>Free shipping on orders above 300 kr. </p>
-<p>Free home delivery on orders above 500 kr.</p> 
- </div>
-
-        <Link className='link-checkout' to="/Checkout" >
-   <button   onClick={() => { 
-  console.log("Going to Checkout");
-  handleToggleCart(cartProducts);        
-}} > Go to Checkout </button>
-   </Link>
-
-  
-
- 
-
+                          <hr className='lower-cart-hr'></hr>
+                          <div className='cart-total'>
+     
+    
         </div>
                  </div>
               ) } 
@@ -91,8 +67,20 @@ To Tips
         })
       }
       
-     
+      {
+          total < 1
+          ? "Ops! No items."
+          : `Total ${total} kr` 
+          
+        }
+<div className='free'> 
+<p>Free shipping on orders above 300 kr. </p>
+<p>Free home delivery on orders above 500 kr.</p> 
+ </div>
       
+      <Link className='link-checkout' to="/Checkout" >
+       Checkout 
+       </Link>
       </div>
 
     

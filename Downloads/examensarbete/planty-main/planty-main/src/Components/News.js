@@ -10,11 +10,13 @@ function News() {
         <p className='planty-instagram'>@planty</p>
         
         <div className='news-container'>
+
+          <div className ="news-img">
         <img height={280} width ={280} src={springsale} alt="" />
         <img height={280} width ={280} src={news2} alt="" />
         <img height={280} width ={280} src={news1} alt="" />
-
-
+        </div>
+        
         </div>
         </div>
   )

@@ -124,7 +124,8 @@ const addToCart = (e, id) => {
         }
         
        </div>
-    
+   <a href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'> 
+   To payment </a>
     </div>
     
   )

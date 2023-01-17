@@ -44,8 +44,9 @@ function Header({cartProducts, setCartProducts}) {
  
  <Link to ="/">Home</Link>
  <Link to ="/About">About us</Link>
- <Link to ="/Products"onClick={() => {window.location.href="/Products"}}>Our products</Link> 
- <Link to ="/Tips" onClick={() => {window.location.href="/Tips"}}>Tips</Link> 
+ <Link to ="/Products">Our products</Link> 
+ <Link to ="/Tips">Tips</Link> 
+ <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/>
 
  <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}  onClick={handleToggleCart} />
  {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>  */}

@@ -30,9 +30,9 @@ function Home() {
             </div>
 
             <div className='info-offering'>
-            <p className='offer-p'> Home visits for watering </p>
-            <p> High quality potted plants </p>
-            <p> Care advice and tips </p>
+            <p className='home'> Home visits for watering </p>
+            <p className='high'> High quality potted plants </p>
+            <p className='care'> Care advice and tips </p>
             </div>
 
 <News/>
