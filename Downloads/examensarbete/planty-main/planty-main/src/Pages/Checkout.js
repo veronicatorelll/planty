@@ -61,9 +61,11 @@ const addToCart = (e, id) => {
 
         <p className='checkout-title'>Checkout</p>
         <p className='order-summary'>Order Summary</p>
+        <div className='continue-container'>
                     <Link className='continue' to="/Products">
                           Continue shopping
                          </Link>
+                         </div>
           {
               cartProducts?.map(product =>
                  {
@@ -92,7 +94,7 @@ const addToCart = (e, id) => {
 
                          
       <form onSubmit={(e) => addToCart(e, product.id)}>
-            <label>
+            <label className='quantity-container'>
             <span className="minus" onClick={decreaseItems}>-</span>
             <input className='input-quantity' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
             <span className="plus" onClick={addItems}>+</span>
@@ -124,8 +126,17 @@ const addToCart = (e, id) => {
         }
         
        </div>
-   <a href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'> 
+
+       <div className='payment-container'>
+   <a className='payment' href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'> 
    To payment </a>
+   </div>
+
+   <div className='continue-container-lower'>
+                    <Link className='continue-lower' to="/Products">
+                          Continue shopping
+                         </Link>
+                         </div>
     </div>
     
   )

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Checkout from '../Pages/Checkout';
 import { CartButton } from '../Styles/cartStyle';
+import {FaShoppingCart} from "react-icons/fa"
 
 
 
@@ -31,11 +32,13 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
     setToggleCart(!toggleCart)
   }
 
+
   return (
     <div>
+      
       <div className='cart-container'>
 
-<div className='one'>
+<div className='cart-title-container'>
       <p className='cart-title'>Shopping cart</p>
    
 
@@ -58,6 +61,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <p className='cart-amount'>Amount: {product.quantity}</p>      
                           <hr className='lower-cart-hr'></hr>
                           <div className='cart-total'>
+
      
     
         </div>
@@ -66,6 +70,9 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
               else { return null }
         })
       }
+
+
+      <div className='no-items'>
       
       {
           total < 1
@@ -73,18 +80,24 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
           : `Total ${total} kr` 
           
         }
+
+</div>
+
+
 <div className='free'> 
-<p>Free shipping on orders above 300 kr. </p>
-<p>Free home delivery on orders above 500 kr.</p> 
+<p className='freeone'>Free shipping on orders above 300 kr. </p>
+<p className='freetwo'>Free home delivery on orders above 500 kr.</p> 
  </div>
       
+      <div className='link-checkout-container'>
       <Link className='link-checkout' to="/Checkout" >
        Checkout 
        </Link>
+       </div>
+
       </div>
 
     
-
 
 
 

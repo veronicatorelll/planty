@@ -9,6 +9,7 @@ function About() {
     <div className='about-container'>
         <p className='about-title'> Where it all began... </p>
         
+        <div className='about-text-container'>
         <p className='about-text'> What seems to be just another page in your sitemap, probably accessible through your header and/or footer, is actually one of your most compelling pieces of content. Or at least, it should be.
 Yes, we’re talking about your website’s About Us page.
 
@@ -21,7 +22,7 @@ This visitor wants to get to know you by listening to the story you have to tell
 The first step to create an authentic, effective about us page that really communicates who you are and what you’re about is perfecting every design detail. First impressions matter and your website needs to dress to impress. 
 
 Let’s take a look at 16 of our favorite About Us pages, whose design and content strategy are worth writing home about. </p>
-
+</div>
 <div className='about-img'>
 <img height={600} width ={800} src={about} alt="" />
 </div>

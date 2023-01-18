@@ -6,7 +6,7 @@ import news2 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-mai
 function News() {
   return (
     <div>
-        <p className='news-title'>Keep getting inspired. Follow us on Instagram!</p>
+        <p className='news-title'>Keep getting inspired</p>
         <p className='planty-instagram'>@planty</p>
         
         <div className='news-container'>

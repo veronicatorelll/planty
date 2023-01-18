@@ -30,25 +30,26 @@ function Footer() {
 <p> track your order </p>
 <p> before your purchase </p>
 <p> FAQ </p>
+<p>Media</p>
+<p>Career</p>
 </div>
 
 {/* Social Media Icons */}
 <div className='socials'>
-<p> Follow us on</p>
     <img height={45} width ={45} src={icon1} alt="" />
     <img height={45} width ={45} src={icon2} alt="" />
     <img height={45} width ={45} src={icon3} alt="" />
   </div>
 
 {/* Klarna Payment Icon */}
-  <div className='klarna-icon'>
+  {/* <div className='klarna-icon'>
   <p> Smooth payments with</p>
 <img height={65} width ={70} src={klarna} alt="" />
-</div>
+</div> */}
 
 {/* Copyright */}
  <p className='copyright'>
-Copyright © Veronica Torell 2023 ◦ All rights reserved
+Copyright © PLANTY AB 2023 ◦ All rights reserved
 </p> 
 
 

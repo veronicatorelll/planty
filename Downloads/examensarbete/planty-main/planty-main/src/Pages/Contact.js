@@ -6,13 +6,13 @@ function Contact() {
   return (
     <div>
 
-    <div className='contact-container'>
-
 <p className='title-contact'>
   We are here for you!
   </p>
 
-<p className='contact-content'>
+
+    <div className='contact-container'>
+    <p className='contact-content'>
   Your contact information is used to contact you, and can include information such as your name, phone number and email. 
 It could also include your professional profile, if you have one and if necessary or relevant for the jobs you're applying for.
 During the hiring process, employers use the contact info listed on your resume to provide 
@@ -21,7 +21,7 @@ updates about your job application, including getting in touch to schedule initi
  </div>
 
  <div className='contact-img'>
-<img height={500} width ={800} src={contact} alt="" />
+<img height={700} width ={1000} src={contact} alt="" />
 </div>
 
 

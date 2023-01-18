@@ -45,28 +45,15 @@ function Header({cartProducts, setCartProducts}) {
  <Link to ="/">Home</Link>
  <Link to ="/About">About us</Link>
  <Link to ="/Products">Our products</Link> 
- <Link to ="/Tips">Tips</Link> 
- <FaShoppingCart className="FaShoppingCart" onClick={handleToggleCart}/>
+ <Link to ="/Tips">Tips</Link>
 
- <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}  onClick={handleToggleCart} />
- {/* <Checkout cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>  */}
+              <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}/>
 
-   
 
-{/*  {             
-      cartProducts?.map(product => {
-      if(product.cart === true) 
-      { 
-        total += product.price * product.quantity
 
-                         return ( 
-                         <div key={product.id}>           
-                    
-                 </div>
-              ) } 
-        })
-      } */}
-     <br></br>
+
+ {/* <Cart cartProducts={cartProducts} setCartProducts={setCartProducts} toggleCart={toggleCart} setToggleCart={setToggleCart}  onClick={handleToggleCart} /> */}
+ 
     </div>
     </div>
   )
