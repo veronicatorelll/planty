@@ -24,15 +24,15 @@ function Home() {
             <p className='offering'>OUR OFFERING</p>
             <p className='get'>What you can get at Planty</p>
             <div className='offer-img'>
-            <img height={300} className='' src={offer2} alt="" />
-            <img height={300} className='' src={offer4} alt="" />
-            <img height={300} className='' src={offer3} alt="" />
+              
+            <img className='' src={offer2} alt="" />
+            <img className='' src={offer4} alt="" />
+            <img className='' src={offer3} alt="" />
+            
             </div>
 
             <div className='info-offering'>
-            <p className='home'> Home visits for watering </p>
-            <p className='high'> High quality potted plants </p>
-            <p className='care'> Care advice and tips </p>
+          
             </div>
 
 <News/>

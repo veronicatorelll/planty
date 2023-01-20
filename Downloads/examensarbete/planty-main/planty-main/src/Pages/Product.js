@@ -66,12 +66,13 @@ function Product ({setCartProducts, cartProducts}) {
             <p className='product-title'>{product.title}</p>
 
 
-            <div className='price-desc-container'>
+            <div className='product-info'>
             <p className='product-price'>{product.price} kr </p>
             <p className='product-description'> {product.description}</p>
             </div>
+
             <div className="product-img">
-            <img height={550} src={product.img_url} alt="" />
+            <img src={product.img_url} alt="" />
             </div>
 
 

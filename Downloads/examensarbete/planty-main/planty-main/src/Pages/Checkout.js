@@ -132,6 +132,12 @@ const addToCart = (e, id) => {
    To payment </a>
    </div>
 
+   <div className='to-orderconf'>
+    <Link to="/OrderConf">
+      To Order Confirmation
+    </Link>
+   </div>
+
    <div className='continue-container-lower'>
                     <Link className='continue-lower' to="/Products">
                           Continue shopping

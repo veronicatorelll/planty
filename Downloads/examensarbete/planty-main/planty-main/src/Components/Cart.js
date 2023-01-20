@@ -54,7 +54,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                          return ( 
                          <div key={product.id}>       
                           <div className='cart-img'>                      
-                          <img height={200} src={product.img_url} alt="" />
+                          <img height={200} width={200} src={product.img_url} alt="" />
                           </div>                   
                           <button className='remove-cart' onClick={() => removeFromCart(product.id)}> x </button>  
                           <p className='cart-prodname'>{product.title}</p>                       
@@ -84,7 +84,7 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
 </div>
 
 
-<div className='free'> 
+<div className='free-container'> 
 <p className='freeone'>Free shipping on orders above 300 kr. </p>
 <p className='freetwo'>Free home delivery on orders above 500 kr.</p> 
  </div>

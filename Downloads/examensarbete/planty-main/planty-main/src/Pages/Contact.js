@@ -21,7 +21,7 @@ updates about your job application, including getting in touch to schedule initi
  </div>
 
  <div className='contact-img'>
-<img height={700} width ={1000} src={contact} alt="" />
+<img src={contact} alt="" />
 </div>
 
 

@@ -4,6 +4,7 @@ import icon1 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-mai
 import icon2 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/icon-facebook-green.png"
 import icon3 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/icon-twitter-green.png"
 import klarna from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/sofort-klarna.png"
+import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/logo20.png"
 
 
 
@@ -13,26 +14,17 @@ function Footer() {
 
 
 {/* Information */}
-<div className='info-container'>
+{/* <div className='info-container'>
   <p className='information-title'>INFORMATION</p>
   <p> purchase conditions </p>
   <p>returns & complaints</p>
   <p>payment methods</p>
   <p>delivery information</p>
   <p>privacy policy</p>
-  <p>cookies</p>
-</div>
+  <p> FAQ </p>
+</div> */}
 
-{/* Help */}
-<div className='help-container'>
-<p className='help-title'>HELP</p>
-<p> contact us </p>
-<p> track your order </p>
-<p> before your purchase </p>
-<p> FAQ </p>
-<p>Media</p>
-<p>Career</p>
-</div>
+
 
 {/* Social Media Icons */}
 <div className='socials'>
@@ -40,7 +32,7 @@ function Footer() {
     <img height={45} width ={45} src={icon2} alt="" />
     <img height={45} width ={45} src={icon3} alt="" />
   </div>
-
+<p className='footer-logo'> PLANTY </p>
 {/* Klarna Payment Icon */}
   {/* <div className='klarna-icon'>
   <p> Smooth payments with</p>

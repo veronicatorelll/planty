@@ -4,7 +4,7 @@ import orderconf from "C:/Users/veron/Downloads/examensarbete/planty-main/planty
 function OrderConf() {
   return (
     <div className='orderconf'>
-  <img height={700} width ={500} src={orderconf} alt="Logo" />;
+  <img height={800} width ={650} src={orderconf} alt="Logo" />;
     </div>
   )
 }
