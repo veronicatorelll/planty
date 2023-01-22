@@ -28,22 +28,32 @@ function Products({setCartProducts, cartProducts}) {
   return (
     
 
-            products.map((product) => (
+         <div>
 
-              <div className="products-container">
-               <div key={product.id} >
-                <img height={400} width={400} src={product.img_url} alt="" />
+          <div className="products-container">
+          {products.map((product) => (
 
-                 <Link to={`/product/${product.id}`}>
-                <div>{product.title} </div> 
-                </Link>
+<div className="products-container">
 
-               <div>{product.price} :-</div> 
+ <div key={product.id} >
+  <img height={400} width={350} src={product.img_url} alt="" />
 
-               </div>
-               </div>
+   <Link to={`/product/${product.id}`}> <div>{product.title} </div> </Link>
 
-     ))
+ <div>{product.price} :-</div> 
+ </div>
+
+
+
+ </div>
+
+))
+
+             }   </div>
+
+
+
+         </div>
   )
 }
 

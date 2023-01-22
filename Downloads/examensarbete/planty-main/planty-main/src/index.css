@@ -138,11 +138,12 @@ text-decoration: none;
 }
 /* --- About --- */
 .about-title{
+
   font-family: garamond;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7vh;
+  margin-top: 22%;
   margin-bottom: -13vh;
   font-size: 3em;
   color: rgba(255, 255, 255, 0.834);
@@ -168,7 +169,7 @@ text-decoration: none;
  color: rgba(255, 255, 255, 0.759);
   height: 10%;
   border-radius: 0.3vh;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1rem;
 }
 
@@ -239,7 +240,7 @@ text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8vh;
+  margin-top: 20%;
   margin-bottom: 1vh;
   font-size: 3rem;
 }
@@ -277,6 +278,7 @@ text-decoration: none;
 }
 
 /* --- Logo for Header --- */
+
 .logo {
   display: flex;
   justify-content: center;
@@ -285,11 +287,12 @@ text-decoration: none;
 
 /* --- Home --- */
 .home-title {
+  margin-top: 15%;
+
   font-family: garamond;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15vh;
   margin-bottom: 3vh;
   font-size: 3rem;
 }
@@ -410,12 +413,19 @@ text-decoration: none;
 } */
 
 /* --- All Products --- */
-.products-container {
+.products-container  {
 display: flex;
 flex-wrap: wrap;
-width: 40vh;
-border: solid green;
+justify-content: space-between;
+padding: 17px;
+text-align: center;
+margin-top: 10%;
 }
+
+
+
+
+
 
 /* --- Single Product  --- */
 .product-img {
@@ -434,7 +444,7 @@ border: solid green;
 .product-title{
   font-family: garamond;
   margin-left: 45%;
-  margin-top: 11vh;
+  margin-top: 15%;
   font-size: 2.5rem;
 }
 
@@ -446,26 +456,30 @@ border: solid green;
 
 .add-cart-container{
   margin-left: 45%;
-  margin-top: -37vh;
+  margin-top: -47vh;
   width: 8%;
-  height: 2vh;
+  height: 1.8vh;
   border: solid rgba(128, 128, 128, 0.716);
   border-width: thin;
-  padding:5px 5px 10px 4px;
+  padding:5px 5px 15px 4px;
+  text-align: center;
 }
 
 .add-cart-container span {
-  height: 1vh;
+  height: 50%;
   width: 2vh;
   
 }
 
- .input-quantity {
+ .input-quantity, .plus, .minus {
   font-size: 1rem;
   height: 2vh;
   width: 5vh;
+  margin-bottom: 5px;
   
 }
+
+
 
 .add-to-cart{
   display: block;
@@ -489,7 +503,7 @@ border: solid green;
 }
 /*   --- Tips --- */
 .tips-page-title{
-  margin-top: 15vh;
+  margin-top: 20%;
   font-family: garamond;
   display: flex;
   justify-content: center;
@@ -583,15 +597,14 @@ align-items: center;
 
 /* --- Cart --- */
 .cart-container {
-  border: solid rgba(0, 0, 0, 0.075) 1px;
+  border: solid rgba(94, 230, 63, 0.755) 1px;
   padding: 1rem;
   height: 30vh;
   max-height: 60vh;
   overflow: auto;
   scroll-behavior: smooth;
-  margin-right: 2vw;
   width: 33vh;
-  margin-top: 33vh;
+  margin-top: 22%;
 }
 
 .cart-container::-webkit-scrollbar {
@@ -632,14 +645,16 @@ background-color: white;
 display: flex;
 justify-content: center;
 align-items: center;
+font-size: 0.8rem;
 }
 
 
 .cart-title-container{
   position: sticky;
   margin-bottom: 0;
-  top: 0;
+  margin: 0;
   background-color: white;
+  padding: 10px;
   width: 25vh;
 }
 
@@ -652,7 +667,7 @@ align-items: center;
 
 .cart-title{
   font-family: garamond;
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1vh;
   margin-left: 0vh;
 }
@@ -734,6 +749,8 @@ align-items: center;
 }
 
 .checkout-title{
+  margin-top: 45%;
+  margin-left: -75%;
   font-family: garamond;
   font-size: 3rem;
   display: flex;
@@ -879,8 +896,9 @@ span {cursor:pointer; }
       display: inline-block;
   
       font-size: 16px;
+      margin-top: -12%;
+      margin-right: -5%;
   
-      margin: 4px 2px;
   
       cursor: pointer;
   
@@ -928,7 +946,7 @@ span {cursor:pointer; }
   
     .dropdown-content {
       display: none;
-  margin-left: 80%;
+  margin-left: 75%;
       position: absolute;
       margin-top: -15%;
       padding: 12px 16px;
@@ -987,8 +1005,7 @@ span {cursor:pointer; }
   
     position: relative;
   
-    top: 50px;
-  
+margin-top: -10%;  
     left: 50px;
   
     z-index: 1;
@@ -1175,7 +1192,7 @@ span {cursor:pointer; }
   
    
   
-    background: #ededed;
+    background: #9c3d3d00;
   
     list-style-type: none;
   
@@ -1203,6 +1220,12 @@ span {cursor:pointer; }
   
     font-size: 22px;
   
+  }
+
+  #menu li:hover {
+    color:  #279627;
+    text-decoration: underline;
+
   }
   
    

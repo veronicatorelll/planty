@@ -23,12 +23,11 @@ function Header({cartProducts, setCartProducts}) {
 
 
   return (
-<div>
+<div className='header-wrapper'>
 
-  <div className='header-message'>FREE SHIPPING ON PURCHASES OVER 200kr
-</div>
+  <div className='header-message'>FREE SHIPPING ON PURCHASES OVER 200kr</div>
   <div className='logo'>
-<img height={350} width ={700} src={logo} alt="Logo" />
+<img src={logo} alt="Logo" />
 </div>
 
 
@@ -77,7 +76,7 @@ function Header({cartProducts, setCartProducts}) {
 
       <a href="/About"><li>About</li></a>
 
-      <a href="Tips"><li>Info</li></a>
+      <a href="Tips"><li>Tips</li></a>
 
       <a href="Contact"><li>Contact</li></a>
 
