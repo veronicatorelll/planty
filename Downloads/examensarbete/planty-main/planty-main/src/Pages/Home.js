@@ -1,8 +1,9 @@
 import React from 'react'
 import hero from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/home.jpg"
-import offer4 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer4.png"
-import offer2 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer2.png"
-import offer3 from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/offer3.png"
+import watering from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/watering.jpg"
+import homevisit from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/homevisit.jpg"
+import tips from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/tips.jpg"
+
 import News from '../Components/News'
 
 
@@ -25,15 +26,13 @@ function Home() {
             <p className='get'>What you can get at Planty</p>
             <div className='offer-img'>
               
-            <img className='' src={offer2} alt="" />
-            <img className='' src={offer4} alt="" />
-            <img className='' src={offer3} alt="" />
-            
+            <img src={watering} alt="" />
+            <img src={homevisit} alt="" />
+            <img src={tips} alt="" />            
             </div>
-
             <div className='info-offering'>
-          
             </div>
+          
 
 <News/>
             

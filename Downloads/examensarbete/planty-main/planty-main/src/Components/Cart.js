@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import Checkout from '../Pages/Checkout';
 import { CartButton } from '../Styles/cartStyle';
 import {FaShoppingCart} from "react-icons/fa"
+import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/trash.png"
+
 
 
 
@@ -56,9 +58,11 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
                           <div className='cart-img'>                      
                           <img height={200} width={200} src={product.img_url} alt="" />
                           </div>                   
-                          <button className='remove-cart' onClick={() => removeFromCart(product.id)}> x </button>  
                           <p className='cart-prodname'>{product.title}</p>                       
-                          <p className='cart-amount'>Amount: {product.quantity}</p>      
+                          <p className='cart-amount'>Amount: {product.quantity}</p>    
+                          <button className='remove-cart' onClick={() => removeFromCart(product.id)}> 
+                          <img height={30} width={30} src={logo} alt="Logo" />
+                           </button>    
                           <hr className='lower-cart-hr'></hr>
                           <div className='cart-total'>
 

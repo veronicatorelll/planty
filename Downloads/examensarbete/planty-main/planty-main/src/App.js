@@ -15,6 +15,7 @@ import Payment from './Pages/Payment';
 import OrderConf from './Pages/OrderConf';
 import Tips from './Pages/Tips';
 import News from './Components/News';
+import NewsPage from './Pages/NewsPage';
 
 function App() {
 
@@ -66,6 +67,8 @@ useEffect( () => {
 <Route path="/OrderConf" element={<OrderConf />} />  
 <Route path="/Tips" element={<Tips />} />  
 <Route path="/Header" element={<Header/>} />  
+<Route path="NewsPage" element={<NewsPage />} /> 
+
 </Routes>
 
 <Footer/>

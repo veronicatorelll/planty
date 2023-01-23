@@ -1,6 +1,8 @@
 import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import {FaShoppingCart} from "react-icons/fa"
+import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/trash.png"
+
 
 
 
@@ -83,7 +85,9 @@ const addToCart = (e, id) => {
                      <div className="checkout-img">
                       <img height={300} width={250} src={product.img_url} alt="" />
                     </div>
-                    <button className='checkout-remove' onClick={() => removeFromCart(product.id )}>x</button>
+                    <button className='checkout-remove' onClick={() => removeFromCart(product.id)}>
+                    <img height={30} width={30} src={logo} alt="Logo" />
+                    </button>
 
                     <div className='checkout-prodinfo'>
                     <p className='checkout-prodtitle'>{product.title}</p>   
@@ -126,6 +130,8 @@ const addToCart = (e, id) => {
         }
         
        </div>
+       <hr className='checkout-hr'></hr>
+
 
        <div className='payment-container'>
    <a className='payment' href='http://127.0.0.1:5500/planty-main/planty-main/Klarna%20Payment/payment.html'> 
@@ -138,11 +144,7 @@ const addToCart = (e, id) => {
     </Link>
    </div>
 
-   <div className='continue-container-lower'>
-                    <Link className='continue-lower' to="/Products">
-                          Continue shopping
-                         </Link>
-                         </div>
+
     </div>
     
   )

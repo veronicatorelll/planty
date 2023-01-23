@@ -68,6 +68,11 @@ function Product ({setCartProducts, cartProducts}) {
 
             <div className='product-info'>
             <p className='product-price'>{product.price} kr </p>
+
+            <hr></hr>
+            <p className='stock'>Denna produkt finns i lager och kan skickas omgående</p>
+            <hr></hr>
+
             <p className='product-description'> {product.description}</p>
             </div>
 
