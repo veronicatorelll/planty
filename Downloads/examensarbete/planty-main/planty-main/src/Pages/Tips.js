@@ -1,46 +1,40 @@
-import React from 'react';
+import React from "react";
 import tips from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Tips.png";
 import bookus from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/Bookus.png";
 
-import News from '../Components/News';
+import News from "../Components/News";
 
 function Tips() {
   return (
-    <div className='tips'>
+    <div className="tips">
+      <p className="tips-page-title">Some tips and tricks, just for you</p>
 
-        <p className='tips-page-title'>Some tips and tricks, just for you</p>
-
-        <div className='tips-container'>
-          
-        <p className='tips-content'>
-        There are many variations of passages of Lorem Ipsum available, 
-        but the majority have suffered alteration in some form, by injected humour, 
-        or randomised words which don't look even slightly believable. 
-        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-        anything embarrassing hidden in the middle of text. 
-        There are many variations of passages of Lorem Ipsum available.
-        There are many variations of passages of Lorem Ipsum available.
-        There are many variations of passages of Lorem Ipsum available, 
-        but the majority have suffered alteration in some form, by injected humour, 
-        or randomised words which don't look even slightly believable. 
-        If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't 
-        anything embarrassing hidden in the middle of text. 
-        There are many variations of passages of Lorem Ipsum available.
+      <div className="tips-container">
+        <p className="tips-content">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomised words which don't look even slightly believable.
+          If you are going to use a passage of Lorem Ipsum, you need to be sure
+          there isn't anything embarrassing hidden in the middle of text. There
+          are many variations of passages of Lorem Ipsum available. There are
+          many variations of passages of Lorem Ipsum available. There are many
+          variations of passages of Lorem Ipsum available, but the majority have
+          suffered alteration in some form, by injected humour, or randomised
+          words which don't look even slightly believable. If you are going to
+          use a passage of Lorem Ipsum, you need to be sure there isn't anything
+          embarrassing hidden in the middle of text. There are many variations
+          of passages of Lorem Ipsum available.
         </p>
-        </div>
+      </div>
 
+      <div className="tips-img">
+        <img src={tips} alt="Logo" />
+        <img src={bookus} alt="Logo" />
+      </div>
 
-
-<div className='tips-img'>
-<img src={tips} alt="Logo" />
-<img src={bookus} alt="Logo" />
-
-</div>
-
-
-<News />
+      <News />
     </div>
-  )
+  );
 }
 
-export default Tips
+export default Tips;

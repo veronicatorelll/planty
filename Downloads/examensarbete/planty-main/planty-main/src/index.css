@@ -119,7 +119,7 @@ width: 100%;
   align-items: center;
   width: 30%;
   margin-left: -5%;
-  margin-top: -27%;
+  margin-top: -100%;
   line-height: 2.8rem;
  color: rgba(255, 255, 255, 0.759);
   height: 10%;
@@ -148,6 +148,7 @@ margin-bottom: -6%;
   justify-content: center;
   padding: 17px;
   margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 
@@ -1112,7 +1113,7 @@ span {cursor:pointer; }
 
 
 
-/* ----- Surfacce Pro 7 ------ */
+/* ----- Surface Pro 7 ------ */
 @media screen and (min-width: 912vh) {
 
 /* Home */
@@ -1139,25 +1140,26 @@ span {cursor:pointer; }
 .product-description{
   width: 80%;
 }
-.add-cart-container{
-  width: 8%;
+.add-cart-container-product{
+  background-color: green;
+  width: 18%;
   border-width: thin;
   padding:1px 1px 5px 1px;
   text-align: center;
   margin-top: -27%;
 }
 
-.add-cart-container span {
+.add-cart-container-product span {
   height: 5%;
   width: 1%;
 }
 
- .input-quantity {
+ .input-quantity-product {
   height: 80%;
   width: 50%;
   margin-bottom: -2%;  
 }
-.plus{
+.plus-product{
   margin-right: 8%;
 }
 
