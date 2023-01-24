@@ -9,6 +9,6 @@ Begränsningar och målplattformar:
 - PHP version: 7.4.26
 
 Webbserverkrav: 
-phpMyAdmin: 5.1.1
-Wampserver: 3.2.6
-MySQL: 5.7.36
+- phpMyAdmin: 5.1.1
+- Wampserver: 3.2.6
+- MySQL: 5.7.36
