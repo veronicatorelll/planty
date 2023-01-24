@@ -98,10 +98,10 @@ const addToCart = (e, id) => {
 
                          
       <form onSubmit={(e) => addToCart(e, product.id)}>
-            <label className='quantity-container'>
-            <span className="minus" onClick={decreaseItems}>-</span>
-            <input className='input-quantity' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
-            <span className="plus" onClick={addItems}>+</span>
+            <label className='quantity-container-checkout'>
+            <span className="decr" onClick={decreaseItems}>-</span>
+            <input className='input-quantity-checkout' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <span className="add" onClick={addItems}>+</span>
 
             </label>
             

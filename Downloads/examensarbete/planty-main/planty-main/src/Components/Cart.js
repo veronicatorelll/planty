@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import Checkout from '../Pages/Checkout';
-import { CartButton } from '../Styles/cartStyle';
 import {FaShoppingCart} from "react-icons/fa"
 import logo from "C:/Users/veron/Downloads/examensarbete/planty-main/planty-main/src/assets/trash.png"
 
@@ -86,12 +85,6 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
         }
 
 </div>
-
-
-<div className='free-container'> 
-<p className='freeone'>Free shipping on orders above 300 kr. </p>
-<p className='freetwo'>Free home delivery on orders above 500 kr.</p> 
- </div>
       
       <div className='link-checkout-container'>
       <Link className='link-checkout' to="/Checkout" >
@@ -102,19 +95,6 @@ function Cart ({cartProducts, setCartProducts, toggleCart, setToggleCart}) {
       </div>
 
     
-
-
-
-
-{/* 
-
-
-        <Checkout 
-        cartProducts={cartProducts} 
-        setCartProducts={setCartProducts} 
-        toggleCart={toggleCart} 
-        setToggleCart={setToggleCart}
-        /> */}
 
 
       </div>

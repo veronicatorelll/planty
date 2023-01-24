@@ -18,10 +18,10 @@ function About() {
   <p className='about-title'> Where it all began... </p>
      
 <div className='about-img'>
-<img height={600} width={600} src={wall3} alt="" />
-<img height={600}width={600} src={wall8} alt="" />
-<img height={600}width={600} src={wall7} alt="" />
-<img height={600}width={600} src={wall9} alt="" />
+<img  src={wall3} alt="" />
+<img src={wall8} alt="" />
+<img  src={wall7} alt="" />
+<img  src={wall9} alt="" />
 
 
 </div>

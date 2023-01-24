@@ -32,7 +32,6 @@ function Home() {
             </div>
             <div className='info-offering'>
             </div>
-          
 
 <News/>
             

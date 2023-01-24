@@ -5,6 +5,7 @@ import {FaShoppingCart} from "react-icons/fa"
 
 
 
+
 function Product ({setCartProducts, cartProducts}) {
     const [product, setProduct] = useState([]);
     const params = useParams();
@@ -69,9 +70,9 @@ function Product ({setCartProducts, cartProducts}) {
             <div className='product-info'>
             <p className='product-price'>{product.price} kr </p>
 
-            <hr></hr>
+            <hr className='product-hr' ></hr>
             <p className='stock'>Denna produkt finns i lager och kan skickas omgående</p>
-            <hr></hr>
+            <hr className='product-hr'></hr>
 
             <p className='product-description'> {product.description}</p>
             </div>
@@ -82,16 +83,16 @@ function Product ({setCartProducts, cartProducts}) {
 
 
 
+           
 
 
 
 
-
-            <form className='add-cart-container' onSubmit={(e) => addToCart(e, product.id)}>
+            <form className='add-cart-container-product' onSubmit={(e) => addToCart(e, product.id)}>
             <label>
-            <span className="minus" onClick={decreaseItems}>-</span>
-            <input className='input-quantity' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
-            <span className="plus" onClick={addItems}>+</span>
+            <span className="minus-product" onClick={decreaseItems}>-</span>
+            <input className='input-quantity-product' type="text" name="quantity" onChange={handleQuantityInput} value={quantity}/>
+            <span className="plus-product" onClick={addItems}>+</span>
 
             </label>
             

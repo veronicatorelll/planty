@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import { Link } from "react-router-dom";
-import { ProductsContainer } from "../Styles/styledProducts";
 import Product from "./Product";
 
 
@@ -29,7 +28,7 @@ function Products({setCartProducts, cartProducts}) {
     
 
          <div>
-
+<p className="our-products">Plants</p>
           <div className="products-container">
           {products.map((product) => (
 
@@ -38,7 +37,7 @@ function Products({setCartProducts, cartProducts}) {
  <div key={product.id} >
   <img height={400} width={350} src={product.img_url} alt="" />
 
-   <Link to={`/product/${product.id}`}> <div>{product.title} </div> </Link>
+   <Link to={`/product/${product.id}`}> <div className="product-titles">{product.title} </div> </Link>
 
  <div>{product.price} :-</div> 
  </div>
